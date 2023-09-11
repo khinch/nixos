@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
-      ../../desktops/pantheon.nix
+      ../../desktops/gnome.nix
       ../../hardware/nvidia.nix
       ../../hardware/wifi.nix
       ../../types/pc.nix
