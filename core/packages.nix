@@ -7,6 +7,8 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     alacritty
+    amberol
+    authenticator
     cherrytree
     curl
     darktable
@@ -14,6 +16,7 @@
     discord
     displaycal
     dosbox
+    eartag
     exiftool
     fatsort
     firefox
@@ -25,7 +28,7 @@
     gcompris
     gimp
     git
-    gnome.gnome-disk-utility
+    gnome-decoder
     google-chrome
     gparted
     gphoto2
@@ -41,13 +44,17 @@
     keepassxc
     krename
     ksnip
+    lf
+    libreoffice
     libdvdcss
     libsForQt5.k3b
     lshw
     lutris
     meld
     mesa-demos
+    metadata-cleaner
     mount
+    mpv
     neofetch
     neovim
     nettools
@@ -65,6 +72,7 @@
     rsync
     rustup
     scribus
+    shortwave
     shotcut
     shutter
     signal-desktop
@@ -72,12 +80,14 @@
     spotify
     steam
     telegram-desktop
+    textpieces
     thunderbird
     transmission-gtk
     tree
     treesheets
     usbutils
     veracrypt
+    video-trimmer
     vim
     vlc
     vscode

@@ -6,27 +6,39 @@
     desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
     layout = "gb";
+    libinput = {
+      enable =true;
+      touchpad = {
+        middleEmulation = true;
+        naturalScrolling = false;
+        tapping = true;
+      };
+    };
     xkbVariant = "";
   };
 
   environment.gnome.excludePackages = (with pkgs; [
-  gnome-tour
+    gnome-console
+    gnome-tour
 ]) ++ (with pkgs.gnome; [
-  gnome-terminal
-  gedit # text editor
+  atomix # puzzle game
   epiphany # web browser
   geary # email reader
-  gnome-characters
-  totem # video player
-  tali # poker game
-  iagno # go game
+  gedit # text editor
+  gnome-terminal
+  gnome-weather
   hitori # sudoku game
-  atomix # puzzle game
+  iagno # go game
+  tali # poker game
+  totem # video player
+  yelp
 ]);
 
   environment.systemPackages = with pkgs; [ 
     gnomeExtensions.appindicator 
-    gnome.gnome.tweaks 
+    gnomeExtensions.dash-to-dock
+    gnome.gnome-characters
+    gnome.gnome-tweaks 
     ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
