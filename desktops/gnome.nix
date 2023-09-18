@@ -5,6 +5,7 @@
     enable = true;
     desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
+    displayManager.gdm.wayland = false; # Remove this to use wayland
     layout = "gb";
     libinput = {
       enable =true;
@@ -35,6 +36,7 @@
 ]);
 
   environment.systemPackages = with pkgs; [ 
+    gnomeExtensions.wayland-or-x11
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
     gnome.gnome-characters

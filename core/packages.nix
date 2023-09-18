@@ -16,6 +16,7 @@
     discord
     displaycal
     dosbox
+    drawing
     eartag
     exiftool
     fatsort
