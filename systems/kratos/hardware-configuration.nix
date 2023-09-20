@@ -26,6 +26,9 @@
   swapDevices =
     [ { device = "/dev/disk/by-uuid/7a547781-adfc-477c-94a9-e76b0cda2202"; }
     ];
+  
+  boot.initrd.luks.devices.crypted.device = "/dev/disk/by-uuid/c3481877-a58b-4417-813b-635e502efda1";
+  fileSystems."/home".device = "/dev/mapper/crypted";
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
