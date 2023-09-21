@@ -13,7 +13,6 @@
     curl
     darktable
     digikam
-    discord
     displaycal
     dosbox
     drawing
@@ -76,11 +75,9 @@
     shortwave
     shotcut
     shutter
-    signal-desktop
     smartmontools
     spotify
     steam
-    telegram-desktop
     textpieces
     thunderbird
     transmission-gtk
@@ -96,6 +93,6 @@
     wget
     xfce.thunar
     xournalpp
-    ydotool
+    xdotool
   ];
 }
