@@ -1,15 +1,21 @@
 { config, pkgs, ... }:
 
 {
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-25.9.0" # For obsidian
+    ];
+  };
 
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     alacritty
     amberol
+    audacity
     authenticator
     cherrytree
+    citrix_workspace
     curl
     darktable
     digikam
@@ -20,7 +26,7 @@
     exiftool
     fatsort
     firefox
-    flameshot
+    freecad
     freefilesync
     fuse
     fuse3
@@ -43,13 +49,15 @@
     joplin-desktop
     keepassxc
     krename
-    ksnip
+    krita
     lf
-    libreoffice
     libdvdcss
+    libreoffice
+    libsForQt5.ark
     libsForQt5.k3b
     lshw
     lutris
+    megasync
     meld
     mesa-demos
     metadata-cleaner
@@ -65,7 +73,7 @@
     pavucontrol
     pciutils
     pdfgrep
-    pdfmixtool
+    playonlinux
     prismlauncher
     qrencode
     realesrgan-ncnn-vulkan
@@ -78,7 +86,6 @@
     smartmontools
     spotify
     steam
-    textpieces
     thunderbird
     transmission-gtk
     tree
@@ -91,8 +98,11 @@
     vscode
     webcamoid
     wget
+    winetricks
+    wineWowPackages.stable
     xfce.thunar
     xournalpp
-    xdotool
+    ydotool
+    zoom-us
   ];
 }
