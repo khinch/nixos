@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
-      ../../desktops/gnome.nix
+      ../../desktops/i3.nix
       ../../hardware/wifi.nix
       ../../types/pc.nix
     ];
