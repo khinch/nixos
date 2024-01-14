@@ -9,3 +9,8 @@ cd /etc/nixos
 sudo nixos-rebuild
 ```
 
+## Framework 13 AMD
+```
+$ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+$ sudo nix-channel --update
+```
