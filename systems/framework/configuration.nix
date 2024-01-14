@@ -5,8 +5,8 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [
+      <nixos-hardware/framework/13-inch/7040-amd>
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
