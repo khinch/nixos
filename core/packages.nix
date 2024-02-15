@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
@@ -10,96 +9,55 @@
   };
 
   environment.systemPackages = with pkgs; [
-    alacritty
     amberol
     audacity
     authenticator
     cherrytree
     citrix_workspace
-    curl
     darktable
     digikam
     displaycal
-    dosbox
     drawing
     eartag
     exiftool
-    fatsort
     firefox
     freecad
     freefilesync
-    fuse
-    fuse3
-    fuse-common
-    gcompris
     gimp
-    git
     gnome-decoder
     google-chrome
-    gparted
     gphoto2
-    gsmartcontrol
     gtypist
     guvcview
     handbrake
-    hardinfo
-    htop
-    hwinfo
-    inotify-tools
     joplin-desktop
     keepassxc
     krename
     krita
-    lf
     libdvdcss
     libreoffice
-    libsForQt5.ark
     libsForQt5.k3b
-    lshw
-    lutris
     megasync
-    meld
-    mesa-demos
     metadata-cleaner
-    mount
     mpv
-    neofetch
-    neovim
-    nettools
     notepadqq
     obsidian
-    openssl
-    pass
-    pavucontrol
-    pciutils
-    pdfgrep
-    playonlinux
-    prismlauncher
     qrencode
     realesrgan-ncnn-vulkan
-    rsync
     rustup
     scribus
     shortwave
     shotcut
     shutter
-    smartmontools
     spotify
-    steam
     thunderbird
     transmission-gtk
-    tree
     treesheets
-    usbutils
     veracrypt
     video-trimmer
-    vim
     vlc
     vscode
     webcamoid
-    wget
-    winetricks
-    wineWowPackages.stable
     xfce.thunar
     xournalpp
     ydotool

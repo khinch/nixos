@@ -6,11 +6,13 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
+      <nixos-hardware/common/gpu/amd>
       ./hardware-configuration.nix
       ../../core/core.nix
-      ../../core/packages.nix
       ../../desktops/gnome.nix
+      ../../modules/games.nix
+      ../../modules/tools.nix
       ../../types/pc.nix
     ];
 

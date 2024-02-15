@@ -12,6 +12,8 @@
       ../../core/packages.nix
       ../../desktops/gnome.nix
       ../../hardware/wifi.nix
+      ../../modules/games.nix
+      ../../modules/tools.nix
       ../../types/pc.nix
     ];
 
