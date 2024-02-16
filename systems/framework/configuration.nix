@@ -11,6 +11,7 @@
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/gnome.nix
+      ../../hardware/amd.nix
       ../../hardware/wifi.nix
       ../../modules/games.nix
       ../../modules/tools.nix

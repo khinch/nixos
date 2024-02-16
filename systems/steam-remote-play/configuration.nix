@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../desktops/gnome.nix
+      ../../hardware/amd.nix
       ../../modules/games.nix
       ../../modules/tools.nix
       ../../types/pc.nix
