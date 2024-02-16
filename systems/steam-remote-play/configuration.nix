@@ -42,6 +42,11 @@
       packages = with pkgs; [];
     };
   };
+
+  services.xserver.displayManager.autoLogin = {
+    enable = true;
+    user = "isla";
+  };
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
