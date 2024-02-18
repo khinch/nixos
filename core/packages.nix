@@ -42,6 +42,7 @@
     mpv
     notepadqq
     obsidian
+    plots
     qrencode
     realesrgan-ncnn-vulkan
     rustup

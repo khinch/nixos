@@ -17,6 +17,7 @@
   environment.systemPackages = with pkgs; [
     dosbox
     gcompris
+    gnuchess
     lutris
     mesa-demos
     playonlinux
@@ -24,5 +25,6 @@
     steam
     winetricks
     wineWowPackages.stable
+    xboard
   ];
 }
