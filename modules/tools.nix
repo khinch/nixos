@@ -5,6 +5,7 @@
     alacritty
     curl
     fatsort
+    freefilesync
     fuse
     fuse3
     fuse-common
