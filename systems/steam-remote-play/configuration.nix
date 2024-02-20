@@ -5,58 +5,52 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
-      <nixos-hardware/framework/13-inch/7040-amd>
+  imports =
+    [ 
+      <nixos-hardware/common/gpu/amd>
       ./hardware-configuration.nix
       ../../core/core.nix
-      ../../core/packages.nix
       ../../desktops/gnome.nix
       ../../hardware/amd.nix
-      ../../hardware/wifi.nix
       ../../modules/games.nix
       ../../modules/tools.nix
       ../../types/pc.nix
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.useOSProber = true;
 
   # Define your hostname.
-  networking.hostName = "framework"; 
+  networking.hostName = "steam-remote-play"; 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kieren = {
-    isNormalUser = true;
-    description = "Kieren Hinch";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
+  users.users = {
+    kieren = {
+        isNormalUser = true;
+        description = "Kieren Hinch";
+        extraGroups = [ "networkmanager" "wheel" ];
+        packages = with pkgs; [];
+    };
+    isla = {
+      isNormalUser = true;
+      description = "Isla Hinch";
+      extraGroups = [];
+      packages = with pkgs; [];
+    };
   };
 
-  # PlayOnLinux
-  services.pipewire = {
+  services.xserver.displayManager.autoLogin = {
     enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  }; 
+    user = "isla";
+  };
 
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "electron-25.9.0"
-  # ];
-
-  environment.systemPackages = [
-    pkgs.linuxKernel.kernels.linux_6_7
-    pkgs.power-profiles-daemon
-  ];
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_7;
-
-  # fwupdmgr
-  services.fwupd.enable = true;
-
-  #vmware
-  virtualisation.vmware.host.enable = true;
+  # Hack to make Gnome auto-login work
+  # https://github.com/NixOS/nixpkgs/issues/103746
+  services.xserver.displayManager.job.preStart = "sleep 5";
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -82,6 +76,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Did you read the comment?
 
 }
