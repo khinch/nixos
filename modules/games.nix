@@ -23,6 +23,7 @@
     playonlinux
     prismlauncher
     steam
+    vulkan-tools
     winetricks
     wineWowPackages.stable
     xboard
