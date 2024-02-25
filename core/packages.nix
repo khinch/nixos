@@ -30,6 +30,7 @@
     gtypist
     guvcview
     handbrake
+    hugin
     joplin-desktop
     keepassxc
     krename
@@ -37,16 +38,21 @@
     libdvdcss
     libreoffice
     libsForQt5.k3b
+    losslesscut-bin
+    makemkv
     megasync
     metadata-cleaner
+    minder
     mpv
     notepadqq
     obsidian
+    pdfmixtool
     plots
     qrencode
     realesrgan-ncnn-vulkan
     rustup
     scribus
+    semantik
     shortwave
     shotcut
     shutter
