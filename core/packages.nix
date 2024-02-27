@@ -18,6 +18,7 @@
     digikam
     displaycal
     drawing
+    drawio
     eartag
     exiftool
     firefox
