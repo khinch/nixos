@@ -12,6 +12,11 @@
       pulse.enable = true;
     };
     printing.enable = true;
+    avahi = { # For printing
+      enable = true;
+      nssmdns = true;
+      openFirewall = true;
+    };
   };
   security.rtkit.enable = true;
   sound.enable = true;
