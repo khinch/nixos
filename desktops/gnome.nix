@@ -1,12 +1,7 @@
 { pkgs, ... }:
 
 {
-  services.xserver = {
-    enable = true;
-    desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
-    displayManager.gdm.wayland = false; # Remove this to use wayland
-    layout = "gb";
+  services = {
     libinput = {
       enable =true;
       touchpad = {
@@ -15,17 +10,27 @@
         tapping = true;
       };
     };
-    xkbVariant = "";
+
+    xserver = {
+      enable = true;
+      desktopManager.gnome.enable = true;
+      displayManager.gdm.enable = true;
+      # displayManager.gdm.wayland = false; # Remove this to use wayland
+      xkb = {
+        layout = "gb";
+        variant = "";
+      };
+    };
   };
 
   environment.gnome.excludePackages = (with pkgs; [
+    gedit
     gnome-console
     gnome-tour
 ]) ++ (with pkgs.gnome; [
   atomix # puzzle game
   epiphany # web browser
   geary # email reader
-  gedit # text editor
   gnome-terminal
   gnome-weather
   hitori # sudoku game
@@ -40,6 +45,7 @@
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
     gnome.gnome-characters
+    gnome.gnome-disk-utility
     gnome.gnome-tweaks 
     ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
