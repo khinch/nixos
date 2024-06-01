@@ -22,6 +22,7 @@
     mesa-demos
     playonlinux
     prismlauncher
+    qsynth
     steam
     winetricks
     wineWowPackages.stable

@@ -6,13 +6,12 @@
 
 {
   imports = [
-      <nixos-hardware/framework/13-inch/7040-amd>
+      <nixos-hardware/common/gpu/amd>
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/gnome.nix
       ../../hardware/amd.nix
-      ../../hardware/wifi.nix
       ../../modules/games.nix
       ../../modules/tools.nix
       ../../types/pc.nix
@@ -23,7 +22,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Define your hostname.
-  networking.hostName = "framework"; 
+  networking.hostName = "atrius"; 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.kieren = {
@@ -31,28 +30,8 @@
     description = "Kieren Hinch";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      dotool
     ];
   };
-
-  # PlayOnLinux
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  }; 
-
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "electron-25.9.0"
-  # ];
-
-  environment.systemPackages = [
-    # pkgs.linuxKernel.kernels.linux_6_7
-    pkgs.power-profiles-daemon
-  ];
-  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_8;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # fwupdmgr
   services.fwupd.enable = true;
@@ -84,6 +63,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Did you read the comment?
 
 }

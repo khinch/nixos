@@ -13,7 +13,6 @@
     audacity
     authenticator
     cherrytree
-    citrix_workspace
     darktable
     digikam
     displaycal
