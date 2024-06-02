@@ -22,6 +22,7 @@
     mesa-demos
     playonlinux
     prismlauncher
+    qsynth
     steam
     vulkan-tools
     winetricks

@@ -31,6 +31,7 @@
     description = "Kieren Hinch";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      dotool
     ];
   };
 
@@ -47,16 +48,17 @@
   # ];
 
   environment.systemPackages = [
-    pkgs.linuxKernel.kernels.linux_6_7
+    # pkgs.linuxKernel.kernels.linux_6_7
     pkgs.power-profiles-daemon
   ];
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_7;
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_8;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # fwupdmgr
   services.fwupd.enable = true;
 
   #vmware
-  virtualisation.vmware.host.enable = true;
+  # virtualisation.vmware.host.enable = true;
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
