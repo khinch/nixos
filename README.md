@@ -11,8 +11,12 @@ cd /etc/nixos
 sudo nixos-rebuild
 ```
 
-## Framework 13 AMD
+## Framework and Atrius
 ```
 $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
 $ sudo nix-channel --update
 ```
+
+## Citrix
+If system requires Citrix, first download the required .tar.gz file and run the following command before the installation. Note that the version must match exactly the version listed on the nixos.org package.   
+`nix-prefetch-url file:/path/to/file.tar.gz`  

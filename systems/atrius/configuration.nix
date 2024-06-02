@@ -20,18 +20,62 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Define your hostname.
   networking.hostName = "atrius"; 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kieren = {
-    isNormalUser = true;
-    description = "Kieren Hinch";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
+  users.users = {
+    kieren = {
+      isNormalUser = true;
+      description = "Kieren Hinch";
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
+      packages = with pkgs; [
+        dotool
+      ];
+    };
+    vml = {
+      isNormalUser = true;
+      description = "Work account for VML contract";
+      extraGroups = [ "networkmanager" ];
+      packages = with pkgs; [
+        slack
+      ];
+    };
   };
+
+  # workaround for slack from https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1927729514
+  nixpkgs.overlays = [
+    (final: prev: {
+    # Fix slack screen sharing following: https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1807073763
+      slack = prev.slack.overrideAttrs (previousAttrs: {
+        installPhase =
+          previousAttrs.installPhase
+          + ''
+          sed -i'.backup' -e 's/,"WebRTCPipeWireCapturer"/,"LebRTCPipeWireCapturer"/' $out/lib/slack/resources/app.asar
+          '';
+    });
+  })];
+
+
+
+  services.printing.enable = true;
+  # services.printing.drivers = [
+  #   (writeTextDir "share/cups/model/Kyocera ECOSYS P5021cdn.ppd" (builtins.readFile ../../bin/Kyocera_ECOSYS_P5021cdn.PPD))
+
+  # ];
+
+  networking.hosts = {
+    "192.168.5.83" = [ "KM3BCB84.local" "KM3BCB84" ];
+  };
+
+
+  # firewire card
+  boot.kernelModules = [
+    "firewire_core"
+    "firewire_ohci"
+  ];
 
   # fwupdmgr
   services.fwupd.enable = true;

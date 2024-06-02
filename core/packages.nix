@@ -17,6 +17,7 @@
     digikam
     displaycal
     drawing
+    drawio
     eartag
     exiftool
     firefox
@@ -29,23 +30,28 @@
     gtypist
     guvcview
     handbrake
-    joplin-desktop
+    hugin
     keepassxc
     krename
     krita
     libdvdcss
     libreoffice
     libsForQt5.k3b
+    losslesscut-bin
+    makemkv
     megasync
     metadata-cleaner
+    minder
     mpv
     notepadqq
     obsidian
+    pdfmixtool
     plots
     qrencode
     realesrgan-ncnn-vulkan
     rustup
     scribus
+    semantik
     shortwave
     shotcut
     shutter
@@ -62,5 +68,14 @@
     xournalpp
     ydotool
     zoom-us
+
+    # Firewire test
+    libraw1394 
+    libavc1394 
+    libdc1394 
+    libiec61883 
+    hw-probe 
+    dvgrab 
+    coriander
   ];
 }

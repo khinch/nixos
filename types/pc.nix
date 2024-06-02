@@ -2,6 +2,7 @@
 
 {
   hardware.pulseaudio.enable = false;
+  hardware.sane.enable = true;
   networking.networkmanager.enable = true;
   services = {
     flatpak.enable = true;

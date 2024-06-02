@@ -24,6 +24,7 @@
     prismlauncher
     qsynth
     steam
+    vulkan-tools
     winetricks
     wineWowPackages.stable
     xboard
