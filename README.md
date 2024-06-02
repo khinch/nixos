@@ -11,6 +11,22 @@ cd /etc/nixos
 sudo nixos-rebuild
 ```
 
+## Updates
+```
+sudo nix-collect-garbage --delete-older-than 60d
+sudo nix-channel --update
+sudo nixos-rebuild boot
+```
+
+## Upgrades
+```
+sudo nix-channel --add https://channels.nixos.org/nixos-<version> nixos
+sudo nix-channel --update
+cd /etc/nixos
+sudo nixos-rebuild boot
+reboot
+```
+
 ## Framework and Atrius
 ```
 $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
