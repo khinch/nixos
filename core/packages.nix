@@ -31,7 +31,6 @@
     guvcview
     handbrake
     hugin
-    joplin-desktop
     keepassxc
     krename
     krita
@@ -69,5 +68,14 @@
     xournalpp
     ydotool
     zoom-us
+
+    # Firewire test
+    libraw1394 
+    libavc1394 
+    libdc1394 
+    libiec61883 
+    hw-probe 
+    dvgrab 
+    coriander
   ];
 }

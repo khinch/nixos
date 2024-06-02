@@ -8,6 +8,8 @@ packages=(
     "com.github.tchx84.Flatseal"
     "com.ozmartians.VidCutter"
     "com.ticktick.TickTick"
+    "flathub org.pencil2d.Pencil2D"
+    "net.cozic.joplin_desktop"
     "org.signal.Signal"
     "org.telegram.desktop"
 )
