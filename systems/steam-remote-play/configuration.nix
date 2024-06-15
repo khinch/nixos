@@ -51,6 +51,9 @@
   # Hack to make Gnome auto-login work
   # https://github.com/NixOS/nixpkgs/issues/103746
   services.xserver.displayManager.job.preStart = "sleep 5";
+
+  # Firewall for Minecraft
+  networking.firewall.allowedTCPPorts = [ 25555 ];
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
