@@ -41,9 +41,10 @@
 ]);
 
   environment.systemPackages = with pkgs; [ 
-    gnomeExtensions.wayland-or-x11
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.forge
+    gnomeExtensions.wayland-or-x11
     gnome.gnome-characters
     gnome.gnome-disk-utility
     gnome.gnome-tweaks 
