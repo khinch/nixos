@@ -30,7 +30,7 @@
     kieren = {
       isNormalUser = true;
       description = "Kieren Hinch";
-      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
       packages = with pkgs; [
         dotool
       ];
@@ -44,6 +44,19 @@
       ];
     };
   };
+
+  # workaround for slack from https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1927729514
+  nixpkgs.overlays = [
+    (final: prev: {
+    # Fix slack screen sharing following: https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1807073763
+      slack = prev.slack.overrideAttrs (previousAttrs: {
+        installPhase =
+          previousAttrs.installPhase
+          + ''
+          sed -i'.backup' -e 's/,"WebRTCPipeWireCapturer"/,"LebRTCPipeWireCapturer"/' $out/lib/slack/resources/app.asar
+          '';
+    });
+  })];
 
   services.printing.enable = true;
   # services.printing.drivers = [
