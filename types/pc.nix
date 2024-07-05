@@ -1,6 +1,12 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
+  fonts.packages = with pkgs; [
+    corefonts
+    google-fonts
+    vistafonts
+  ];
+
   hardware.pulseaudio.enable = false;
   hardware.sane.enable = true;
   networking.networkmanager.enable = true;

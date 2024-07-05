@@ -29,7 +29,7 @@
   users.users.kieren = {
     isNormalUser = true;
     description = "Kieren Hinch";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm"];
     packages = with pkgs; [
       dotool
     ];

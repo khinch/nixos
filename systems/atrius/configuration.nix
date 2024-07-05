@@ -30,7 +30,7 @@
     kieren = {
       isNormalUser = true;
       description = "Kieren Hinch";
-      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
       packages = with pkgs; [
         dotool
       ];
@@ -57,8 +57,6 @@
           '';
     });
   })];
-
-
 
   services.printing.enable = true;
   # services.printing.drivers = [
