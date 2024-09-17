@@ -4,6 +4,7 @@
   fonts.packages = with pkgs; [
     corefonts
     google-fonts
+    nerdfonts
     vistafonts
   ];
 
@@ -22,4 +23,6 @@
   };
   security.rtkit.enable = true;
   sound.enable = true;
+
+  virtualisation.podman.enable = true;
 }

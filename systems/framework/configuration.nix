@@ -26,13 +26,23 @@
   networking.hostName = "framework"; 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kieren = {
-    isNormalUser = true;
-    description = "Kieren Hinch";
-    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm"];
-    packages = with pkgs; [
-      dotool
-    ];
+  users.users = {
+    kieren = {
+      isNormalUser = true;
+      description = "Kieren Hinch";
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
+      packages = with pkgs; [
+        dotool
+      ];
+    };
+    vml = {
+      isNormalUser = true;
+      description = "Work account for VML contract";
+      extraGroups = [ "networkmanager" ];
+      packages = with pkgs; [
+        slack
+      ];
+    };
   };
 
   # PlayOnLinux

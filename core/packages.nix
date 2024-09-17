@@ -16,6 +16,7 @@
     darktable
     digikam
     displaycal
+    distrobox
     drawing
     drawio
     eartag
@@ -65,6 +66,7 @@
     vscode
     webcamoid
     xfce.thunar
+    xpano
     xournalpp
     ydotool
     zoom-us
