@@ -33,6 +33,7 @@
       extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
       packages = with pkgs; [
         dotool
+        simplex-chat-desktop
       ];
     };
     vml = {
@@ -83,7 +84,8 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  # 33741 = simplex desktop
+  networking.firewall.allowedTCPPorts = [ 33741 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
