@@ -5,6 +5,7 @@
     corefonts
     google-fonts
     nerdfonts
+    noto-fonts
     vistafonts
   ];
 
