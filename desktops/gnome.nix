@@ -41,6 +41,7 @@
   ]);
 
   environment.systemPackages = with pkgs; [ 
+    ffmpegthumbnailer
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
     gnomeExtensions.forge
