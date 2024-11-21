@@ -16,6 +16,7 @@
     darktable
     digikam
     displaycal
+    distrobox
     drawing
     drawio
     eartag
@@ -48,6 +49,7 @@
     pdfmixtool
     plots
     qrencode
+    read-it-later
     realesrgan-ncnn-vulkan
     rustup
     scribus
@@ -65,6 +67,7 @@
     vscode
     webcamoid
     xfce.thunar
+    xpano
     xournalpp
     ydotool
     zoom-us
