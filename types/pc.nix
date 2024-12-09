@@ -31,7 +31,6 @@
     };
   };
   security.rtkit.enable = true;
-  sound.enable = true;
 
   virtualisation.podman.enable = true;
 }

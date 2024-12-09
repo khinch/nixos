@@ -2,13 +2,12 @@
 
 {
   # services.xserver.videoDrivers = [ "amdgpu" ];
-  hardware.opengl = {
+  hardware.graphics = {
     # Mesa
     enable = true;
 
     # Vulkan
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
 
     extraPackages = [ pkgs.amdvlk ];
     extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];

@@ -27,7 +27,7 @@
     gedit
     gnome-console
     gnome-tour
-  ]) ++ (with pkgs.gnome; [
+  ]) ++ (with pkgs; [
     atomix # puzzle game
     epiphany # web browser
     geary # email reader
@@ -42,16 +42,20 @@
 
   environment.systemPackages = with pkgs; [ 
     ffmpegthumbnailer
+    gnome-characters
+    gnome-disk-utility
+    gnome-tweaks 
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
     gnomeExtensions.forge
     gnomeExtensions.pop-shell
     gnomeExtensions.wayland-or-x11
-    gnome.gnome-characters
-    gnome.gnome-disk-utility
-    gnome.gnome-tweaks 
     ];
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
+
+  environment.sessionVariables = rec {
+    GSK_RENDERER = "gl"; # Fix black borders: https://gitlab.gnome.org/GNOME/gtk/-/issues/6890
+  };
 
   programs.nautilus-open-any-terminal = {
     enable = true;
