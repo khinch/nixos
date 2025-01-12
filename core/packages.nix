@@ -46,6 +46,7 @@
     mpv
     notepadqq
     obsidian
+    parabolic
     pdfmixtool
     plots
     qrencode
