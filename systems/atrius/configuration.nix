@@ -24,7 +24,7 @@
 
   # Define your hostname.
   networking.hostName = "atrius"; 
-
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     kieren = {
@@ -41,7 +41,12 @@
       extraGroups = [ "networkmanager" ];
       packages = with pkgs; [
         slack
+        teams-for-linux
       ];
+    };
+    megatest = {
+      isNormalUser = true;
+      description = "For testing megasync via distrobox";
     };
   };
 

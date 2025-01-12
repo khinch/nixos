@@ -32,12 +32,12 @@
     guvcview
     handbrake
     hugin
+    kdePackages.k3b
     keepassxc
     krename
     krita
     libdvdcss
     libreoffice
-    libsForQt5.k3b
     losslesscut-bin
     makemkv
     megasync
@@ -46,10 +46,10 @@
     mpv
     notepadqq
     obsidian
+    parabolic
     pdfmixtool
     plots
     qrencode
-    read-it-later
     realesrgan-ncnn-vulkan
     rustup
     scribus
@@ -59,7 +59,7 @@
     shutter
     spotify
     thunderbird
-    transmission-gtk
+    transmission_4-gtk
     treesheets
     veracrypt
     video-trimmer
@@ -79,6 +79,5 @@
     libiec61883 
     hw-probe 
     dvgrab 
-    coriander
   ];
 }
