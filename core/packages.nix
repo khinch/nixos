@@ -49,7 +49,6 @@
     pdfmixtool
     plots
     qrencode
-    read-it-later
     realesrgan-ncnn-vulkan
     rustup
     scribus
