@@ -16,6 +16,7 @@
     darktable
     digikam
     displaycal
+    distrobox
     drawing
     drawio
     eartag
@@ -31,12 +32,12 @@
     guvcview
     handbrake
     hugin
+    kdePackages.k3b
     keepassxc
     krename
     krita
     libdvdcss
     libreoffice
-    libsForQt5.k3b
     losslesscut-bin
     makemkv
     megasync
@@ -45,6 +46,7 @@
     mpv
     notepadqq
     obsidian
+    parabolic
     pdfmixtool
     plots
     qrencode
@@ -57,7 +59,7 @@
     shutter
     spotify
     thunderbird
-    transmission-gtk
+    transmission_4-gtk
     treesheets
     veracrypt
     video-trimmer
@@ -65,6 +67,7 @@
     vscode
     webcamoid
     xfce.thunar
+    xpano
     xournalpp
     ydotool
     zoom-us
@@ -76,6 +79,5 @@
     libiec61883 
     hw-probe 
     dvgrab 
-    coriander
   ];
 }

@@ -26,13 +26,24 @@
   networking.hostName = "framework"; 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kieren = {
-    isNormalUser = true;
-    description = "Kieren Hinch";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      dotool
-    ];
+  users.users = {
+    kieren = {
+      isNormalUser = true;
+      description = "Kieren Hinch";
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
+      packages = with pkgs; [
+        dotool
+        simplex-chat-desktop
+      ];
+    };
+    vml = {
+      isNormalUser = true;
+      description = "Work account for VML contract";
+      extraGroups = [ "networkmanager" ];
+      packages = with pkgs; [
+        slack
+      ];
+    };
   };
 
   # PlayOnLinux
@@ -73,7 +84,9 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  # 33741 = simplex desktop
+  # 25565 = minecraft
+  networking.firewall.allowedTCPPorts = [ 33741 25565 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;

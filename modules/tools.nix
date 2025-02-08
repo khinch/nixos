@@ -8,7 +8,6 @@
     freefilesync
     fuse
     fuse3
-    fuse-common
     git
     gparted
     gsmartcontrol

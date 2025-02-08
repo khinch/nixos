@@ -24,13 +24,13 @@
 
   # Define your hostname.
   networking.hostName = "atrius"; 
-
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     kieren = {
       isNormalUser = true;
       description = "Kieren Hinch";
-      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
       packages = with pkgs; [
         dotool
       ];
@@ -41,7 +41,12 @@
       extraGroups = [ "networkmanager" ];
       packages = with pkgs; [
         slack
+        teams-for-linux
       ];
+    };
+    megatest = {
+      isNormalUser = true;
+      description = "For testing megasync via distrobox";
     };
   };
 
@@ -57,8 +62,6 @@
           '';
     });
   })];
-
-
 
   services.printing.enable = true;
   # services.printing.drivers = [

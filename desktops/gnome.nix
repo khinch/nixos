@@ -27,27 +27,39 @@
     gedit
     gnome-console
     gnome-tour
-]) ++ (with pkgs.gnome; [
-  atomix # puzzle game
-  epiphany # web browser
-  geary # email reader
-  gnome-terminal
-  gnome-weather
-  hitori # sudoku game
-  iagno # go game
-  tali # poker game
-  totem # video player
-  yelp
-]);
+  ]) ++ (with pkgs; [
+    atomix # puzzle game
+    epiphany # web browser
+    geary # email reader
+    gnome-terminal
+    gnome-weather
+    hitori # sudoku game
+    iagno # go game
+    tali # poker game
+    totem # video player
+    yelp
+  ]);
 
   environment.systemPackages = with pkgs; [ 
-    gnomeExtensions.wayland-or-x11
+    ffmpegthumbnailer
+    gnome-characters
+    gnome-disk-utility
+    gnome-tweaks 
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
-    gnome.gnome-characters
-    gnome.gnome-disk-utility
-    gnome.gnome-tweaks 
+    gnomeExtensions.forge
+    gnomeExtensions.pop-shell
+    gnomeExtensions.wayland-or-x11
     ];
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
+
+  environment.sessionVariables = rec {
+    GSK_RENDERER = "gl"; # Fix black borders: https://gitlab.gnome.org/GNOME/gtk/-/issues/6890
+  };
+
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "alacritty";
+  };
 
 }
