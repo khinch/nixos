@@ -10,7 +10,8 @@
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
-      ../../desktops/gnome.nix
+      # ../../desktops/gnome.nix
+      ../../desktops/hyprland
       ../../hardware/amd.nix
       ../../hardware/wifi.nix
       ../../modules/games.nix

@@ -24,24 +24,32 @@
   programs.hyprland.xwayland.enable = true;
 
   environment.systemPackages = with pkgs; [
-    evince
+    brightnessctl
+    evince #pdf reader
     gnome-icon-theme
-    gnome.gnome-calendar
-    gnome.gnome-keyring
+    gnome-calendar
+    gnome-keyring
+    hypridle
+    hyprlock
+    hyprpaper
+    hyprshot
     kdePackages.qtwayland
-    loupe
+    kitty
+    libnotify
+    loupe # image viewer
     networkmanagerapplet
-    nwg-bar
-    nwg-drawer
-    nwg-launchers
-    nwg-look #keep
-    nwg-menu
+    # nwg-bar
+    # nwg-drawer
+    # nwg-launchers
+    # nwg-look #keep
+    # nwg-menu
     libsForQt5.qt5.qtwayland
-    rofi-wayland
-    swaybg
+    # rofi-wayland
+    # swaybg
     swaynotificationcenter
-    xdg-desktop-portal-gtk
     waybar
+    wofi
+    xdg-desktop-portal-gtk
   ];
 
   fonts = {
