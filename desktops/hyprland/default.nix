@@ -48,10 +48,12 @@
     libsForQt5.qt5.qtwayland
     # rofi-wayland
     # swaybg
+    starship
     swaynotificationcenter
     waybar
     wofi
     xdg-desktop-portal-gtk
+    xfce.mousepad
 
     # JaKooLit
     ags #for Desktop overview

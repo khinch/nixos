@@ -139,7 +139,7 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#hyprland window,
+#window,
 #mpd {
     margin: 2px;
     padding-left: 4px;

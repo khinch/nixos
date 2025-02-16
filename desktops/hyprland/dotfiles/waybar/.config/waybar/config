@@ -6,7 +6,7 @@
     "spacing": 5, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["idle_inhibitor", "temperature", "hyprland/workspaces", "network", "tray"],
-    "modules-center": ["clock" ],
+    "modules-center": ["clock", "custom/swaync" ],
     "modules-right": [ "hyprland/window", "battery", "pulseaudio" ],
     // unused modules: ["hyprland/mode", "hyprland/scratchpad", "custom/media", "backlight", "battery", "mpd", "cpu", "memory", "battery#bat2", "backlight", "keyboard-state", "bluetooth" ]
     // Modules configuration
@@ -39,7 +39,7 @@
         "spacing": 5
     },
     "clock": {
-        "format": "{:%R}",
+        "format": "⏱ {:%R}",
         // "format-alt": "",
         "tooltip-format": "{:%a | %d-%m-%Y}\n<tt>{calendar}</tt>",
         "on-click": "gnome-calendar"
@@ -60,7 +60,7 @@
     //    },
     //    "format": "{icon} {capacity}%",
     //    "format-charging": " {capacity}%",
-    //    "format-plugged": " u+e55c {capacity}%",
+    //    "format-plugged": " {capacity}%",
     //    "format-alt": "{icon} {time}",
     //    // "format-good": "", // An empty format will hide the module
     //    // "format-full": "",
@@ -111,7 +111,25 @@
       "on-click": "blueman-manager",
     },
     "custom/swaync": {
-
+      "tooltip": true,
+      "tooltip-format": "Left Click: foo\nRight Click: bar",
+      "format": "{} {icon} ",
+      "format-icons": {
+		"notification": "<span foreground='red'><sup></sup></span>",
+		"none": "",
+		"dnd-notification": "<span foreground='red'><sup></sup></span>",
+		"dnd-none": "",
+		"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+		"inhibited-none": "",
+		"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+		"dnd-inhibited-none": ""
+	  },
+	  "return-type": "json",
+	  "exec-if": "which swaync-client",
+	  "exec": "swaync-client -swb",
+	  "on-click": "sleep 0.1 && swaync-client -t -sw",
+	  "on-click-right": "swaync-client -d -sw",
+	  "escape": true
     },
 
     "pulseaudio": {

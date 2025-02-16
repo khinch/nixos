@@ -15,6 +15,8 @@
     vistafonts
   ];
 
+  environment.systemPackages = [ pkgs.nixd ];
+
   hardware.pulseaudio.enable = false;
   hardware.sane.enable = true;
   networking.networkmanager.enable = true;
