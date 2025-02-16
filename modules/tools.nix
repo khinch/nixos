@@ -30,6 +30,7 @@
     pdfgrep
     rsync
     smartmontools
+    stow
     tree
     usbutils
     vim

@@ -3,9 +3,15 @@
 {
   fonts.packages = with pkgs; [
     corefonts
+    fira-code
+    font-awesome
     google-fonts
+    jetbrains-mono
     nerdfonts
-    noto-fonts
+    noto-fonts-emoji
+    powerline-fonts
+    # noto-fonts
+    terminus_font
     vistafonts
   ];
 

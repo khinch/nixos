@@ -6,7 +6,9 @@ Checkout repo and set up symlink from /etc/nixos to the config for the system. E
 ```
 sudo mv /etc/nixos/configuration.nix /etc/nixos/configuration.original
 sudo ln -s /home/kieren/projects/nixos/systems/<system>/configuration.nix /etc/nixos/configuration.nix
-cp /etc/nixos/hardware-configuration.nix /home/kieren/projects/nixos/systems/<system>/hardware-configuration.nix
+cp /etc/nixos/hardware-configuration.nix */home/kieren/projects/nixos/systems/<system>/hardware-configuration.nix
+*If using home manager:*
+sudo ln -s /home/kieren/projects/nixos/systems/<system>/home.nix /etc/nixos/home.nix
 cd /etc/nixos
 sudo nixos-rebuild
 ```

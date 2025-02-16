@@ -22,6 +22,7 @@
     eartag
     exiftool
     firefox
+    font-manager
     freecad
     freefilesync
     gimp
@@ -70,14 +71,15 @@
     xpano
     xournalpp
     ydotool
+    zed-editor
     zoom-us
 
     # Firewire test
-    libraw1394 
-    libavc1394 
-    libdc1394 
-    libiec61883 
-    hw-probe 
-    dvgrab 
+    libraw1394
+    libavc1394
+    libdc1394
+    libiec61883
+    hw-probe
+    dvgrab
   ];
 }

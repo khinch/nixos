@@ -1,0 +1,142 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 24, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 5, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["idle_inhibitor", "temperature", "hyprland/workspaces", "network", "tray"],
+    "modules-center": ["clock" ],
+    "modules-right": [ "hyprland/window", "battery", "pulseaudio" ],
+    // unused modules: ["hyprland/mode", "hyprland/scratchpad", "custom/media", "backlight", "battery", "mpd", "cpu", "memory", "battery#bat2", "backlight", "keyboard-state", "bluetooth" ]
+    // Modules configuration
+    // "hyprland/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "warp-on-scroll": false,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // }
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 5
+    },
+    "clock": {
+        "format": "{:%R}",
+        // "format-alt": "",
+        "tooltip-format": "{:%a | %d-%m-%Y}\n<tt>{calendar}</tt>",
+        "on-click": "gnome-calendar"
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    //"battery": {
+    //    "states": {
+    //        // "good": 95,
+    //        "warning": 30,
+    //        "critical": 15
+    //    },
+    //    "format": "{icon} {capacity}%",
+    //    "format-charging": " {capacity}%",
+    //    "format-plugged": " u+e55c {capacity}%",
+    //    "format-alt": "{icon} {time}",
+    //    // "format-good": "", // An empty format will hide the module
+    //    // "format-full": "",
+    //    "format-icons": ["", "", "", "", ""]
+    //},
+    "battery": {
+	"interval": 5,
+	"align": 0,
+	"rotate": 0,
+	"full-at": 100,
+	"design-capacity": false,
+	"states": {
+		"good": 95,
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{icon}",
+	"format-charging": " ",
+	"format-plugged": "󱘖 ",
+	"format-alt-click": "click",
+	"format-full": "{icon} Full",
+	"format-alt": "{icon} {time}",
+	"format-icons": [
+		"󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+	],
+	"format-time": "{H}h {M}min",
+	"tooltip": true,
+	"tooltip-format": "{capacity}% {power}w\n{timeTo}"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "",
+        "format-ethernet": "{ifname}",
+        "tooltip-format": "{ifname} | {essid} | ({signalStrength}%) | {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠ {ifname}",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
+    },
+    "bluetooth": {
+      "format": " ",
+      "format-disabled": "󰂳",
+      "format-connected": "󰂱 {num_connections}",
+      "tooltip-format": " {device_alias}",
+      "tooltip-format-connected": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+      "tooltip": true,
+      "on-click": "blueman-manager",
+    },
+    "custom/swaync": {
+
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        // "format": "{icon} {volume}% {format_source}",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+//            "headphone": "",
+//            "hands-free": "",
+//            "headset": "",
+//            "phone": "",
+//            "portable": "",
+//            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "hyprland/window": {
+      "format": "{initialTitle}",
+      "tooltip": true,
+      // "tooltip-format": "{title}|{initialTitle}|{class}|{initialClass}"
+    }
+}
