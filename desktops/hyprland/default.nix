@@ -51,6 +51,7 @@
     starship
     swaynotificationcenter
     waybar
+    wl-clipboard
     wofi
     xdg-desktop-portal-gtk
     xfce.mousepad

@@ -39,7 +39,7 @@
         "spacing": 5
     },
     "clock": {
-        "format": "⏱ {:%R}",
+        "format": "󰅐  {:%R}",
         // "format-alt": "",
         "tooltip-format": "{:%a | %d-%m-%Y}\n<tt>{calendar}</tt>",
         "on-click": "gnome-calendar"
@@ -135,7 +135,7 @@
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         // "format": "{icon} {volume}% {format_source}",
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-bluetooth": " {icon} {volume}% {format_source}",
         "format-bluetooth-muted": "  {icon} {format_source}",
         "format-muted": "  {format_source}",
@@ -148,7 +148,8 @@
 //            "phone": "",
 //            "portable": "",
 //            "car": "",
-            "default": ["", "", ""]
+//            "default": ["", "", ""]
+          "default": [""]
         },
         "on-click": "pavucontrol"
     },

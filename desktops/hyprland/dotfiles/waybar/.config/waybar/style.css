@@ -140,6 +140,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #window,
+#custom-swaync,
 #mpd {
     margin: 2px;
     padding-left: 4px;
