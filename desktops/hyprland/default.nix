@@ -24,10 +24,20 @@
   # programs.hyprland.enable = true; # enabled further down
   # programs.hyprland.xwayland.enable = true; # enabled further down
 
+#  nixpkgs.overlays = [
+#    (self: super: {
+#      # flameshot needs this for Wayland & wlroots based compositors
+#      flameshotgrim = super.flameshot.override {
+#        enableWlrSupport = true;
+#      };
+#    })
+#  ];
+
   environment.systemPackages = with pkgs; [
     blueman
     brightnessctl
     evince #pdf reader
+    flameshot 
     gnome-icon-theme
     gnome-calendar
     gnome-keyring
@@ -50,11 +60,13 @@
     # swaybg
     starship
     swaynotificationcenter
+    ueberzugpp
     waybar
     wl-clipboard
     wofi
     xdg-desktop-portal-gtk
     xfce.mousepad
+    yazi
 
     # JaKooLit
     ags #for Desktop overview
@@ -162,4 +174,9 @@
       pkgs.xdg-desktop-portal
     ];
   };
+
+  environment.sessionVariables = rec {
+    GSK_RENDERER = "gl"; # Fix black borders: https://gitlab.gnome.org/GNOME/gtk/-/issues/6890
+  };
+
 }

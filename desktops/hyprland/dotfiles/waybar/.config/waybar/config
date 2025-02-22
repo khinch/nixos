@@ -111,9 +111,9 @@
       "on-click": "blueman-manager",
     },
     "custom/swaync": {
-      "tooltip": true,
-      "tooltip-format": "Left Click: foo\nRight Click: bar",
-      "format": "{} {icon} ",
+      // "tooltip": true,
+      // "tooltip-format": "Left Click: foo\nRight Click: bar",
+      "format": "{icon}  {}",
       "format-icons": {
 		"notification": "<span foreground='red'><sup></sup></span>",
 		"none": "",
@@ -134,13 +134,13 @@
 
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
-        // "format": "{icon} {volume}% {format_source}",
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": " {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        // "format": "{icon} {volume}% {format_source}", // inc microphone
+        "format": "  {volume}%",
+        "format-bluetooth": "󰂰  {volume}%",
+        "format-bluetooth-muted": "󰂲 ",
+        "format-muted": "󰝟 ",
+        "format-source": "  {volume}%",
+        "format-source-muted": " ",
         "format-icons": {
 //            "headphone": "",
 //            "hands-free": "",
@@ -156,6 +156,6 @@
     "hyprland/window": {
       "format": "{initialTitle}",
       "tooltip": true,
-      // "tooltip-format": "{title}|{initialTitle}|{class}|{initialClass}"
+      "tooltip-format": "{title}|{initialTitle}|{class}|{initialClass}"
     }
 }
