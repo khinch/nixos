@@ -41,7 +41,9 @@
     "clock": {
         "format": "󰅐  {:%R | %a | %d-%m-%Y}",
         // "format-alt": "",
-        "tooltip-format": "{:%a | %d-%m-%Y}\n<tt>{calendar}</tt>",
+        // "tooltip-format": "{:%a | %d-%m-%Y}\n<tt>{calendar}</tt>",
+        "tooltip-format": "<tt>{calendar}</tt>",
+
         "on-click": "gnome-calendar"
     },
     "temperature": {

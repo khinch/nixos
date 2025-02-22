@@ -90,7 +90,7 @@ button:hover {
 
 #workspaces button {
     padding: 0 4px;
-    color: #ed6677;
+    color: #6ead47;
     /*    background-color: rgba(0,0,0,0.3); */
 }
 
@@ -156,11 +156,15 @@ button:hover {
 }
 
 #network {
-    color: #6ead47;
+    /* color: #6ead47; */
+    color: #33acac;
+
 }
 
 #pulseaudio {
-    color: #33acac;
+    /* color: #33acac;*/
+    color: #5a9bec;
+
 }
 
 #battery {
@@ -168,7 +172,9 @@ button:hover {
 }
 
 #temperature {
-    color: #c36ee7;
+    /* color: #c36ee7; */
+    color: #c68c2e;
+
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -206,11 +212,11 @@ button:hover {
 #battery.warning:not(.charging) {
     background-color: #f53c3c;
     color: #ffffff;
-    animation-name: blink;
+    /*animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate;*/
 }
 
 #battery.critical:not(.charging) {
