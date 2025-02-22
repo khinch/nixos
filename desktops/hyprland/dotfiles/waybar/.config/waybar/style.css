@@ -84,11 +84,13 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    border-top: 2px solid #c9545d;
+    /* border-top: 2px solid #c9545d; */
 }
+
 
 #workspaces button {
     padding: 0 4px;
+    color: #ed6677;
     /*    background-color: rgba(0,0,0,0.3); */
 }
 
@@ -97,18 +99,14 @@ button:hover {
 
 #workspaces button.focused {
     /*    box-shadow: inset 0 -2px #c9545d; */
-    color: #c9545d;
     border-top: 2px solid #b9c9d5;
     color: #b9c9d5;
-
 }
 
 #workspaces button.active {
     /*    box-shadow: inset 0 -2px #c9545d; */
-    color: #c9545d;
     border-top: 2px solid #b9c9d5;
     color: #b9c9d5;
-
 }
 
 #workspaces button.urgent {
@@ -143,6 +141,34 @@ button:hover {
     padding-right: 4px;
     /* background-color: rgb(64, 72, 96); */
     color: #b9c9d5;
+}
+
+#window {
+    color: #c36ee7;
+}
+
+#clock {
+    color: #5a9bec;
+}
+
+#custom-swaync {
+    color: #c68c2e;
+}
+
+#network {
+    color: #6ead47;
+}
+
+#pulseaudio {
+    color: #33acac;
+}
+
+#battery {
+    color: #5a9bec;
+}
+
+#temperature {
+    color: #c36ee7;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
