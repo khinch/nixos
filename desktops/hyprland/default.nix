@@ -34,6 +34,7 @@
 #  ];
 
   environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
     blueman
     brightnessctl
     evince #pdf reader
@@ -41,6 +42,8 @@
     gnome-icon-theme
     gnome-calendar
     gnome-keyring
+    gnome-maps
+    hyprcursor
     hypridle
     hyprlock
     hyprpaper
@@ -53,17 +56,17 @@
     # nwg-bar
     # nwg-drawer
     # nwg-launchers
-    # nwg-look #keep
+    nwg-look
     # nwg-menu
     libsForQt5.qt5.qtwayland
-    # rofi-wayland
+    rofi-wayland
     # swaybg
     starship
     swaynotificationcenter
     ueberzugpp
     waybar
     wl-clipboard
-    wofi
+    #wofi
     xdg-desktop-portal-gtk
     xfce.mousepad
     yazi
@@ -81,7 +84,7 @@
     inxi
     jq
     libsForQt5.qtstyleplugin-kvantum #kvantum
-    nwg-look
+    # nwg-look
     nvtopPackages.full
     pamixer
     playerctl
@@ -116,7 +119,7 @@
   hardware = {
   	bluetooth = {
 	    enable = true;
-	    powerOnBoot = true;
+	    #powerOnBoot = true;
 	    settings = {
 		    General = {
 		      Enable = "Source,Sink,Media,Socket";

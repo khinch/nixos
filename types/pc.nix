@@ -4,11 +4,12 @@
   fonts.packages = with pkgs; [
     corefonts
     fira-code
-    font-awesome
+    #font-awesome
     google-fonts
+    #inter-nerdfont
     jetbrains-mono
     nerdfonts
-    noto-fonts-emoji
+    #noto-fonts-emoji
     powerline-fonts
     # noto-fonts
     terminus_font

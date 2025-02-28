@@ -1,5 +1,6 @@
 * {
-    font-family: "Noto Sans";
+    /*font-family: "Noto Sans";*/
+    font-family: "Inter";
     font-size: 12px;
     font-weight: bold;
     min-height: 0;
@@ -89,7 +90,7 @@ button:hover {
 
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 0 0 0;
     color: #6ead47;
     /*    background-color: rgba(0,0,0,0.3); */
 }
@@ -158,13 +159,16 @@ button:hover {
 #network {
     /* color: #6ead47; */
     color: #33acac;
-
 }
 
 #pulseaudio {
     /* color: #33acac;*/
     color: #5a9bec;
+}
 
+#pulseaudio.muted {
+  color: #ed6677;
+  font-size: 14;
 }
 
 #battery {
@@ -174,7 +178,6 @@ button:hover {
 #temperature {
     /* color: #c36ee7; */
     color: #c68c2e;
-
 }
 
 /* If workspaces is the leftmost module, omit left margin */

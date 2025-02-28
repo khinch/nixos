@@ -17,6 +17,7 @@
   environment.systemPackages = with pkgs; [
     dosbox
     gcompris
+    gamescope
     gnuchess
     lutris
     mesa-demos
