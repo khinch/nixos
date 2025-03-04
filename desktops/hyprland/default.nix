@@ -15,9 +15,20 @@
       };
     };
 
-    displayManager.sddm = {
+    # USB flash drives
+    udisks2.enable = true;
+    gvfs.enable = true;
+
+    #displayManager.sddm = {
+    #  enable = true;
+    #  wayland.enable = true;
+    #};
+    xserver = {
       enable = true;
-      wayland.enable = true;
+      displayManager.gdm = {
+        enable = true;
+        wayland = true;
+      };
     };
   };
 
@@ -51,6 +62,7 @@
     kdePackages.qtwayland
     kitty
     libnotify
+    libsecret
     loupe # image viewer
     networkmanagerapplet
     # nwg-bar
@@ -63,6 +75,7 @@
     # swaybg
     starship
     swaynotificationcenter
+    udiskie
     ueberzugpp
     waybar
     wl-clipboard
@@ -180,6 +193,11 @@
 
   environment.sessionVariables = rec {
     GSK_RENDERER = "gl"; # Fix black borders: https://gitlab.gnome.org/GNOME/gtk/-/issues/6890
+    NIXOS_OZONE_WL = "1";
   };
+
+  security.pam.services.gdm.enableGnomeKeyring = true;
+  # environment.variables.XDG_RUNTIME_DIR = "/run/usr/$UID"; # This breaks distrobox
+  environment.variables.ELECTRON_OZONE_PLATFORM_HINT = "auto";
 
 }

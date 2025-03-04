@@ -43,6 +43,7 @@
       extraGroups = [ "networkmanager" ];
       packages = with pkgs; [
         slack
+        teams-for-linux
       ];
     };
   };
