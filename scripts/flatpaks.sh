@@ -3,7 +3,6 @@
 packages=(
     "com.discordapp.Discord"
     "com.github.flxzt.rnote"
-    "io.gitlab.liferooter.TextPieces"
     "com.github.rajsolai.textsnatcher"
     "com.github.tchx84.Flatseal"
     "com.ozmartians.VidCutter"

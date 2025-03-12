@@ -59,6 +59,7 @@
     shotcut
     shutter
     spotify
+    textpieces
     thunderbird
     transmission_4-gtk
     treesheets
