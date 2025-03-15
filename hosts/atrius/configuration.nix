@@ -10,10 +10,10 @@
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
-      ../../desktops/gnome.nix
+      ../../desktops/gnome
       ../../hardware/amd.nix
-      ../../modules/games.nix
-      ../../modules/tools.nix
+      ../../modules/games
+      ../../modules/tools
       ../../types/pc.nix
     ];
 

@@ -10,11 +10,11 @@
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
-      ../../desktops/gnome.nix
+      ../../desktops/gnome
       ../../hardware/amd.nix
       ../../hardware/wifi.nix
-      ../../modules/games.nix
-      ../../modules/tools.nix
+      ../../modules/games
+      ../../modules/tools
       ../../types/pc.nix
     ];
 
@@ -42,6 +42,7 @@
       extraGroups = [ "networkmanager" ];
       packages = with pkgs; [
         slack
+        teams-for-linux
       ];
     };
   };

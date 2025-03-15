@@ -22,6 +22,7 @@
     eartag
     exiftool
     firefox
+    font-manager
     freecad
     freefilesync
     gimp
@@ -58,6 +59,8 @@
     shotcut
     shutter
     spotify
+    starship
+    textpieces
     thunderbird
     transmission_4-gtk
     treesheets
@@ -69,15 +72,17 @@
     xfce.thunar
     xpano
     xournalpp
+    yazi
     ydotool
+    zed-editor
     zoom-us
 
     # Firewire test
-    libraw1394 
-    libavc1394 
-    libdc1394 
-    libiec61883 
-    hw-probe 
-    dvgrab 
+    libraw1394
+    libavc1394
+    libdc1394
+    libiec61883
+    hw-probe
+    dvgrab
   ];
 }
