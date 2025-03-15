@@ -15,6 +15,7 @@
     htop
     hwinfo
     inotify-tools
+    jq
     lf
     libsForQt5.ark
     lshw

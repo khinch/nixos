@@ -59,6 +59,7 @@
     shotcut
     shutter
     spotify
+    starship
     textpieces
     thunderbird
     transmission_4-gtk
@@ -71,6 +72,7 @@
     xfce.thunar
     xpano
     xournalpp
+    yazi
     ydotool
     zed-editor
     zoom-us

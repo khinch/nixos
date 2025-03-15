@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-  # services.xserver.displayManager.gdm.enable = true;
   services = {
-    # blueman.enable = true;
     dbus.enable = true;
     gnome.gnome-keyring.enable = true;
     libinput = {
@@ -19,10 +17,6 @@
     udisks2.enable = true;
     gvfs.enable = true;
 
-    #displayManager.sddm = {
-    #  enable = true;
-    #  wayland.enable = true;
-    #};
     xserver = {
       enable = true;
       displayManager.gdm = {
@@ -31,18 +25,6 @@
       };
     };
   };
-
-  # programs.hyprland.enable = true; # enabled further down
-  # programs.hyprland.xwayland.enable = true; # enabled further down
-
-#  nixpkgs.overlays = [
-#    (self: super: {
-#      # flameshot needs this for Wayland & wlroots based compositors
-#      flameshotgrim = super.flameshot.override {
-#        enableWlrSupport = true;
-#      };
-#    })
-#  ];
 
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
@@ -65,24 +47,16 @@
     libsecret
     loupe # image viewer
     networkmanagerapplet
-    # nwg-bar
-    # nwg-drawer
-    # nwg-launchers
     nwg-look
-    # nwg-menu
     libsForQt5.qt5.qtwayland
     rofi-wayland
-    # swaybg
-    starship
     swaynotificationcenter
     udiskie
     ueberzugpp
     waybar
     wl-clipboard
-    #wofi
     xdg-desktop-portal-gtk
     xfce.mousepad
-    yazi
 
     # JaKooLit
     ags #for Desktop overview
@@ -95,9 +69,7 @@
     gtk-engine-murrine #for gtk themes
     imagemagick
     inxi
-    jq
     libsForQt5.qtstyleplugin-kvantum #kvantum
-    # nwg-look
     nvtopPackages.full
     pamixer
     playerctl
@@ -120,15 +92,6 @@
     yt-dlp
   ];
 
-  # xdg.portal = {
-  #   enable = true;
-  #   extraPortals = [
-  #     pkgs.xdg-desktop-portal-gtk
-  #   ];
-  # };
-
-  # JaKooLit
-  # blueman.enable = true;
   hardware = {
   	bluetooth = {
 	    enable = true;
@@ -154,7 +117,6 @@
 	  firefox.enable = true;
 	  git.enable = true;
     nm-applet.indicator = true;
-    #neovim.enable = true;
 
 	  thunar.enable = true;
 	  thunar.plugins = with pkgs.xfce; [
@@ -164,7 +126,6 @@
 		  thunar-volman
 		  tumbler
   	];
-
 
     xwayland.enable = true;
 
