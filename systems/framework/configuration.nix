@@ -85,7 +85,8 @@
 
   # Open ports in the firewall.
   # 33741 = simplex desktop
-  networking.firewall.allowedTCPPorts = [ 33741 ];
+  # 25565 = minecraft
+  networking.firewall.allowedTCPPorts = [ 33741 25565 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
