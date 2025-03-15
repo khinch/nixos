@@ -23,6 +23,7 @@
     neofetch
     neovim
     nettools
+    ocrmypdf
     openssl
     pass
     pavucontrol
