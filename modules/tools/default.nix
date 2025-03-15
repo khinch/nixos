@@ -15,6 +15,7 @@
     htop
     hwinfo
     inotify-tools
+    jq
     lf
     libsForQt5.ark
     lshw
@@ -31,9 +32,11 @@
     pdfgrep
     rsync
     smartmontools
+    stow
     tree
     usbutils
     vim
     wget
+    wl-clipboard
   ];
 }

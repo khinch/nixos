@@ -3,11 +3,20 @@
 {
   fonts.packages = with pkgs; [
     corefonts
+    fira-code
+    #font-awesome
     google-fonts
+    #inter-nerdfont
+    jetbrains-mono
     nerdfonts
-    noto-fonts
+    #noto-fonts-emoji
+    powerline-fonts
+    # noto-fonts
+    terminus_font
     vistafonts
   ];
+
+  environment.systemPackages = [ pkgs.nixd ];
 
   hardware.pulseaudio.enable = false;
   hardware.sane.enable = true;

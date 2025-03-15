@@ -1,0 +1,56 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12.0
+
+[font.bold]
+# family = "CaskaydiaCove Nerd Font"
+family = "Hack Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+[window]
+opacity = 0.9
+
+# Colors (Root Loops)
+# via rootloops.sh
+
+[colors.primary]
+background = '#1b242a'
+foreground = '#e6ecf1'
+
+[colors.cursor]
+text = '#1b242a'
+cursor = '#b9c9d5'
+
+[colors.normal]
+black = '#2f3c45'
+red = '#ed6677'
+green = '#6ead47'
+yellow = '#c68c2e'
+blue = '#5a9bec'
+magenta = '#c36ee7'
+cyan = '#33acac'
+white = '#b9c9d5'
+
+[colors.bright]
+black = '#596d7c'
+red = '#f58993'
+green = '#7fc453'
+yellow = '#dfa13e'
+blue = '#7cb1f5'
+magenta = '#d18fef'
+cyan = '#3dc4c4'
+white = '#f4f7f9'
