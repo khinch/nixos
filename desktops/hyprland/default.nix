@@ -54,7 +54,6 @@
     udiskie
     ueberzugpp
     waybar
-    wl-clipboard
     xdg-desktop-portal-gtk
     xfce.mousepad
 
@@ -85,7 +84,6 @@
     swww
     unzip
     wallust
-    wl-clipboard
     wlogout
     xarchiver
     yad

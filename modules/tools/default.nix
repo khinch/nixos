@@ -36,5 +36,6 @@
     usbutils
     vim
     wget
+    wl-clipboard
   ];
 }

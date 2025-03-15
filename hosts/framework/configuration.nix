@@ -11,11 +11,10 @@
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/gnome
-      # ../../desktops/hyprland
       ../../hardware/amd.nix
       ../../hardware/wifi.nix
-      ../../modules/games.nix
-      ../../modules/tools.nix
+      ../../modules/games
+      ../../modules/tools
       ../../types/pc.nix
     ];
 
