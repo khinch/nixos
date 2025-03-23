@@ -52,7 +52,6 @@
     rofi-wayland
     swaynotificationcenter
     udiskie
-    ueberzugpp
     waybar
     xdg-desktop-portal-gtk
     xfce.mousepad

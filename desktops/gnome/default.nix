@@ -47,8 +47,12 @@
     gnome-tweaks 
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.focus-changer
     gnomeExtensions.forge
     gnomeExtensions.pop-shell
+    gnomeExtensions.space-bar
+    gnomeExtensions.switcher
+    gnomeExtensions.tactile
     gnomeExtensions.wayland-or-x11
     ];
   services.udev.packages = with pkgs; [ gnome-settings-daemon ];

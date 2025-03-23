@@ -34,6 +34,7 @@
     smartmontools
     stow
     tree
+    ueberzugpp
     usbutils
     vim
     wget
