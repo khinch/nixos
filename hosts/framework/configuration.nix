@@ -62,6 +62,7 @@
   environment.systemPackages = [
     # pkgs.linuxKernel.kernels.linux_6_7
     pkgs.power-profiles-daemon
+    pkgs.tailscale
   ];
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_8;
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -69,6 +70,11 @@
   # fwupdmgr
   services.fwupd.enable = true;
 
+  #tailscale
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+  };
   #vmware
   # virtualisation.vmware.host.enable = true;
   
