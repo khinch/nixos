@@ -52,6 +52,7 @@
     plots
     qrencode
     realesrgan-ncnn-vulkan
+    rust-analyzer
     rustup
     scribus
     semantik
