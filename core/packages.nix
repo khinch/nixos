@@ -27,6 +27,7 @@
     freefilesync
     gimp
     gnome-decoder
+    gnome-graphs
     google-chrome
     gphoto2
     gtypist
@@ -49,7 +50,6 @@
     obsidian
     parabolic
     pdfmixtool
-    plots
     qrencode
     realesrgan-ncnn-vulkan
     rust-analyzer

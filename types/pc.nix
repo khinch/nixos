@@ -8,7 +8,7 @@
     google-fonts
     #inter-nerdfont
     jetbrains-mono
-    nerdfonts
+    nerd-fonts.hack
     #noto-fonts-emoji
     powerline-fonts
     # noto-fonts
@@ -18,7 +18,7 @@
 
   environment.systemPackages = [ pkgs.nixd ];
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   hardware.sane.enable = true;
   networking.networkmanager.enable = true;
   services = {

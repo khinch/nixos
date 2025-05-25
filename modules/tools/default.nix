@@ -11,7 +11,7 @@
     git
     gparted
     gsmartcontrol
-    hardinfo
+    hardinfo2
     htop
     hwinfo
     inotify-tools
