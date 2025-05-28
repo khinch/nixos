@@ -11,7 +11,7 @@
     git
     gparted
     gsmartcontrol
-    hardinfo
+    hardinfo2
     htop
     hwinfo
     inotify-tools
@@ -34,6 +34,7 @@
     smartmontools
     stow
     tree
+    ueberzugpp
     usbutils
     vim
     wget

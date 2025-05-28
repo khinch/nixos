@@ -6,13 +6,10 @@
 
 {
   imports = [
-      <nixos-hardware/framework/13-inch/7040-amd>
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/gnome
-      ../../hardware/amd.nix
-      ../../hardware/wifi.nix
       ../../modules/games
       ../../modules/tools
       ../../types/pc.nix
@@ -21,10 +18,11 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Define your hostname.
-  networking.hostName = "framework"; 
-
+  networking.hostName = "nixos-test"; 
+  
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     kieren = {
@@ -33,50 +31,32 @@
       extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
       packages = with pkgs; [
         dotool
-        simplex-chat-desktop
-      ];
-    };
-    vml = {
-      isNormalUser = true;
-      description = "Work account for VML contract";
-      extraGroups = [ "networkmanager" ];
-      packages = with pkgs; [
-        slack
-        teams-for-linux
       ];
     };
   };
 
-  # PlayOnLinux
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  }; 
+  # workaround for slack from https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1927729514
+  nixpkgs.overlays = [
+    (final: prev: {
+    # Fix slack screen sharing following: https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1807073763
+      slack = prev.slack.overrideAttrs (previousAttrs: {
+        installPhase =
+          previousAttrs.installPhase
+          + ''
+          sed -i'.backup' -e 's/,"WebRTCPipeWireCapturer"/,"LebRTCPipeWireCapturer"/' $out/lib/slack/resources/app.asar
+          '';
+    });
+  })];
 
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "electron-25.9.0"
+  services.printing.enable = true;
+  # services.printing.drivers = [
+  #   (writeTextDir "share/cups/model/Kyocera ECOSYS P5021cdn.ppd" (builtins.readFile ../../bin/Kyocera_ECOSYS_P5021cdn.PPD))
+
   # ];
 
-  environment.systemPackages = [
-    # pkgs.linuxKernel.kernels.linux_6_7
-    pkgs.power-profiles-daemon
-    pkgs.tailscale
-  ];
-  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_8;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # fwupdmgr
-  services.fwupd.enable = true;
-
-  #tailscale
-  services.tailscale = {
-    enable = true;
-    useRoutingFeatures = "client";
+  networking.hosts = {
+    "192.168.5.83" = [ "KM3BCB84.local" "KM3BCB84" ];
   };
-  #vmware
-  # virtualisation.vmware.host.enable = true;
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -91,9 +71,7 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # 33741 = simplex desktop
-  # 25565 = minecraft
-  networking.firewall.allowedTCPPorts = [ 33741 25565 ];
+  # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
@@ -104,6 +82,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }

@@ -27,6 +27,7 @@
     freefilesync
     gimp
     gnome-decoder
+    gnome-graphs
     google-chrome
     gphoto2
     gtypist
@@ -47,11 +48,10 @@
     mpv
     notepadqq
     obsidian
-    parabolic
     pdfmixtool
-    plots
     qrencode
     realesrgan-ncnn-vulkan
+    rust-analyzer
     rustup
     scribus
     semantik
