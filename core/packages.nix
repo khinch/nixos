@@ -48,7 +48,6 @@
     mpv
     notepadqq
     obsidian
-    parabolic
     pdfmixtool
     qrencode
     realesrgan-ncnn-vulkan

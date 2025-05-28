@@ -16,6 +16,8 @@
     vistafonts
   ];
 
+  fonts.fontDir.enable = true;
+
   environment.systemPackages = [ pkgs.nixd ];
 
   services.pulseaudio.enable = false;

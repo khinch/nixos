@@ -9,6 +9,7 @@ packages=(
     "com.ticktick.TickTick"
     "flathub org.pencil2d.Pencil2D"
     "net.cozic.joplin_desktop"
+    "org.nickvision.tubeconverter"
     "org.signal.Signal"
     "org.telegram.desktop"
 )
