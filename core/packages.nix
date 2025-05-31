@@ -12,6 +12,7 @@
     amberol
     audacity
     authenticator
+    blender
     cherrytree
     darktable
     digikam
@@ -61,6 +62,7 @@
     spotify
     starship
     textpieces
+    textsnatcher
     thunderbird
     transmission_4-gtk
     treesheets

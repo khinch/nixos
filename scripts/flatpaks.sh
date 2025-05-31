@@ -3,7 +3,6 @@
 packages=(
     "com.discordapp.Discord"
     "com.github.flxzt.rnote"
-    "com.github.rajsolai.textsnatcher"
     "com.github.tchx84.Flatseal"
     "com.ozmartians.VidCutter"
     "com.ticktick.TickTick"
@@ -20,3 +19,9 @@ for package in "${packages[@]}"
 do
   flatpak install flathub $package -y
 done
+
+# Fonts
+flatpak --user override --filesystem=$HOME/.local/share/fonts:ro
+flatpak --user override --filesystem=$HOME/.icons:ro
+flatpak --user override --filesystem=/nix/store:ro
+

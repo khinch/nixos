@@ -62,3 +62,5 @@ maximize=true
 monitor-1-layout=1
 row-0=1
 text-color='rgb(90,155,236)'
+show-tiles=['<Super>u']
+
