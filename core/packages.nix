@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 
+let
+  unstable = import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {
+    config = config.nixpkgs.config;
+  };
+in
+
 {
   nixpkgs.config = {
     allowUnfree = true;
@@ -8,6 +14,7 @@
     ];
   };
 
+  
   environment.systemPackages = with pkgs; [
     amberol
     audacity
@@ -50,6 +57,7 @@
     notepadqq
     obsidian
     pdfmixtool
+    photocollage
     qrencode
     realesrgan-ncnn-vulkan
     rust-analyzer
@@ -57,7 +65,6 @@
     scribus
     semantik
     shortwave
-    shotcut
     shutter
     spotify
     starship
@@ -76,7 +83,7 @@
     xournalpp
     yazi
     ydotool
-    zed-editor
+    unstable.zed-editor
     zoom-us
 
     # Firewire test
