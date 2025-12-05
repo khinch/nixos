@@ -12,6 +12,7 @@
     gparted
     gsmartcontrol
     hardinfo2
+    helix
     htop
     hwinfo
     inotify-tools
@@ -33,6 +34,7 @@
     rsync
     smartmontools
     stow
+    tigervnc
     tree
     ueberzugpp
     usbutils

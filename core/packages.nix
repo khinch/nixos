@@ -16,6 +16,7 @@ in
 
   
   environment.systemPackages = with pkgs; [
+    aichat
     amberol
     audacity
     authenticator
