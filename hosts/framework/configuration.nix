@@ -63,6 +63,7 @@
     # pkgs.linuxKernel.kernels.linux_6_7
     pkgs.power-profiles-daemon
     pkgs.tailscale
+    pkgs.tailscale-systray
   ];
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_8;
   boot.kernelPackages = pkgs.linuxPackages_latest;
