@@ -9,6 +9,8 @@ sudo ln -s /home/<user>/projects/nixos/hosts/<host>/configuration.nix /etc/nixos
 cp /etc/nixos/hardware-configuration.nix */home/<user>/projects/nixos/hosts/<host>/hardware-configuration.nix
 ```
 
+Check and update the `system.stateVersion` in `configuration.nix` to match the installation version.
+
 ## dotfiles
 Use `stow` to install dotfiles to home directory. E.g.
 ``` bash
