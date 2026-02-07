@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -18,7 +18,6 @@
     inotify-tools
     jq
     lf
-    libsForQt5.ark
     lshw
     meld
     mount
