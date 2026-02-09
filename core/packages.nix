@@ -13,6 +13,7 @@ in
     audacity
     authenticator
     blender
+    boxbuddy
     cherrytree
     darktable
     digikam
@@ -42,7 +43,7 @@ in
     libreoffice
     losslesscut-bin
     makemkv
-    megasync
+    unstable.megacmd
     metadata-cleaner
     minder
     mpv

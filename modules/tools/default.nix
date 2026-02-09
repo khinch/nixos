@@ -9,6 +9,7 @@
     fuse
     fuse3
     git
+    gitui
     gparted
     gsmartcontrol
     hardinfo2
