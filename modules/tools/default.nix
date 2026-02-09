@@ -1,14 +1,16 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     alacritty
+    btop
     curl
     fatsort
     freefilesync
     fuse
     fuse3
     git
+    gitui
     gparted
     gsmartcontrol
     hardinfo2
@@ -18,7 +20,6 @@
     inotify-tools
     jq
     lf
-    libsForQt5.ark
     lshw
     meld
     mount

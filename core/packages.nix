@@ -7,20 +7,13 @@ let
 in
 
 {
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "electron-25.9.0" # For obsidian
-    ];
-  };
-
-  
   environment.systemPackages = with pkgs; [
     aichat
     amberol
     audacity
     authenticator
     blender
+    boxbuddy
     cherrytree
     darktable
     digikam
@@ -43,7 +36,6 @@ in
     guvcview
     handbrake
     hugin
-    kdePackages.k3b
     keepassxc
     krename
     krita
@@ -51,21 +43,16 @@ in
     libreoffice
     losslesscut-bin
     makemkv
-    megasync
+    unstable.megacmd
     metadata-cleaner
     minder
     mpv
-    notepadqq
     obsidian
     pdfmixtool
     photocollage
     qrencode
     realesrgan-ncnn-vulkan
-    rust-analyzer
-    rustup
     scribus
-    semantik
-    shortwave
     shutter
     spotify
     starship
@@ -87,7 +74,7 @@ in
     unstable.zed-editor
     zoom-us
 
-    # Firewire test
+    # Firewire 
     libraw1394
     libavc1394
     libdc1394

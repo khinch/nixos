@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   fonts.packages = with pkgs; [
-    corefonts
+#    corefonts
     fira-code
     #font-awesome
     google-fonts
@@ -13,7 +13,7 @@
     powerline-fonts
     # noto-fonts
     terminus_font
-    vistafonts
+#    vista-fonts
   ];
 
   fonts.fontDir.enable = true;

@@ -17,12 +17,9 @@
     udisks2.enable = true;
     gvfs.enable = true;
 
-    xserver = {
+    displayManager.gdm = {
       enable = true;
-      displayManager.gdm = {
-        enable = true;
-        wayland = true;
-      };
+      wayland = true;
     };
   };
 
@@ -49,7 +46,7 @@
     networkmanagerapplet
     nwg-look
     libsForQt5.qt5.qtwayland
-    rofi-wayland
+    rofi
     swaynotificationcenter
     udiskie
     waybar
@@ -58,7 +55,6 @@
 
     # JaKooLit
     ags #for Desktop overview
-    btop
     cava
     cliphist
     eog
@@ -68,7 +64,6 @@
     imagemagick
     inxi
     libsForQt5.qtstyleplugin-kvantum #kvantum
-    nvtopPackages.full
     pamixer
     playerctl
     polkit_gnome
@@ -77,7 +72,6 @@
     kdePackages.qt6ct
     kdePackages.qtwayland
     kdePackages.qtstyleplugin-kvantum #kvantum
-    rofi-wayland
     slurp
     swappy
     swww
@@ -149,8 +143,8 @@
     ];
   };
 
-  environment.sessionVariables = rec {
-    GSK_RENDERER = "gl"; # Fix black borders: https://gitlab.gnome.org/GNOME/gtk/-/issues/6890
+  environment.sessionVariables = {
+#    GSK_RENDERER = "gl"; # Fix black borders: https://gitlab.gnome.org/GNOME/gtk/-/issues/6890
     NIXOS_OZONE_WL = "1";
   };
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 packages=(
     "com.discordapp.Discord"
@@ -6,6 +6,8 @@ packages=(
     "com.github.tchx84.Flatseal"
     "com.ozmartians.VidCutter"
     "com.ticktick.TickTick"
+    "com.wireframesketcher.WireframeSketcher"
+    "org.kde.kxstitch"
     "org.pencil2d.Pencil2D"
     "net.cozic.joplin_desktop"
     "org.nickvision.tubeconverter"
