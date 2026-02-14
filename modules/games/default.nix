@@ -3,19 +3,29 @@
 {
   nixpkgs.config.allowUnfree = true;
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-  };
+  programs = {
+    steam = {
+      enable = true;
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
+      ];
+    };
 
+    gamescope = {
+      enable = true;
+      # Important for Steam: leave this off, see below
+      capSysNice = false;
+    };
+  };
+  
   environment.systemPackages = with pkgs; [
     dosbox
     gcompris
-    gamescope
     gnuchess
     lutris
     mesa-demos
     prismlauncher
+    protonup-qt
     qsynth
     vulkan-tools
     winetricks

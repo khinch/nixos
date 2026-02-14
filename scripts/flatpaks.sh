@@ -7,12 +7,13 @@ packages=(
     "com.ozmartians.VidCutter"
     "com.ticktick.TickTick"
     "com.wireframesketcher.WireframeSketcher"
+    "net.cozic.joplin_desktop"
     "org.kde.kxstitch"
     "org.pencil2d.Pencil2D"
-    "net.cozic.joplin_desktop"
     "org.nickvision.tubeconverter"
     "org.shotcut.Shotcut"
     "org.signal.Signal"
+    "org.stellarium.Stellarium"
     "org.telegram.desktop"
 )
 

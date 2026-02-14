@@ -2,18 +2,18 @@
 
 {
   fonts.packages = with pkgs; [
-#    corefonts
+    corefonts
     fira-code
     #font-awesome
     google-fonts
-    #inter-nerdfont
+    inter-nerdfont
     jetbrains-mono
     nerd-fonts.hack
     #noto-fonts-emoji
     powerline-fonts
     # noto-fonts
     terminus_font
-#    vista-fonts
+    vista-fonts
   ];
 
   fonts.fontDir.enable = true;

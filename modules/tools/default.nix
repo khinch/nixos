@@ -29,7 +29,7 @@
     ocrmypdf
     openssl
     pass
-    pavucontrol
+    pwvucontrol
     pciutils
     pdfgrep
     rsync

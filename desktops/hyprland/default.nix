@@ -2,10 +2,14 @@
 
 {
   services = {
+    blueman.enable = true;
     dbus.enable = true;
     gnome.gnome-keyring.enable = true;
+    hardware.bolt = {
+      enable = true;
+    };
     libinput = {
-      enable =true;
+      enable = true;
       touchpad = {
         middleEmulation = true;
         naturalScrolling = false;
@@ -40,6 +44,7 @@
     hyprshot
     kdePackages.qtwayland
     kitty
+    libinput
     libnotify
     libsecret
     loupe # image viewer
@@ -47,6 +52,7 @@
     nwg-look
     libsForQt5.qt5.qtwayland
     rofi
+    rofimoji
     swaynotificationcenter
     udiskie
     waybar
@@ -86,7 +92,6 @@
   hardware = {
   	bluetooth = {
 	    enable = true;
-	    #powerOnBoot = true;
 	    settings = {
 		    General = {
 		      Enable = "Source,Sink,Media,Socket";
