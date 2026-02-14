@@ -1,10 +1,5 @@
 { config, pkgs, ... }:
 
-#let
-#  unstable = import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {
-#    config = config.nixpkgs.config;
-#  };
-
 let
   unstable = import (builtins.fetchTarball {
     # nixos-unstable at some chosen commit
