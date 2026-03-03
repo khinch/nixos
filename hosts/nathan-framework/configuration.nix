@@ -24,6 +24,9 @@
       isNormalUser = true;
       description = "Nathan Hinch";
       extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
+      packages = with pkgs; [
+        megasync
+      ];
     };
   };
 

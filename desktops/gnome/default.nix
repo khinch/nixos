@@ -49,6 +49,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.focus-changer
     gnomeExtensions.forge
+    gnomeExtensions.mock-tray
     gnomeExtensions.pop-shell
     gnomeExtensions.space-bar
     gnomeExtensions.switcher
