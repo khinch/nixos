@@ -11,11 +11,13 @@
       };
     };
 
+    desktopManager = {
+      gnome.enable = true;
+      gdm.enable =true;
+    };
+
     xserver = {
       enable = true;
-      desktopManager.gnome.enable = true;
-      displayManager.gdm.enable = true;
-      # displayManager.gdm.wayland = false; # Remove this to use wayland
       xkb = {
         layout = "gb";
         variant = "";
