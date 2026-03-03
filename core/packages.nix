@@ -27,6 +27,7 @@ in
     drawing
     drawio
     eartag
+    ente-auth
     exiftool
     firefox
     font-manager
@@ -75,6 +76,7 @@ in
     xpano
     xournalpp
     yazi
+    yaziPlugins.glow
     ydotool
     unstable.zed-editor
     zoom-us

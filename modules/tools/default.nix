@@ -11,6 +11,7 @@
     fuse3
     git
     gitui
+    glow
     gparted
     gsmartcontrol
     hardinfo2

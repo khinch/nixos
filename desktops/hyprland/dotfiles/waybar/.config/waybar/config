@@ -1,32 +1,14 @@
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     "spacing": 5, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "temperature", "hyprland/workspaces", "network", "tray"],
-    "modules-center": ["clock", "custom/swaync" ],
-    "modules-right": [ "hyprland/window", "battery", "pulseaudio", "custom/power" ],
-    // unused modules: ["hyprland/mode", "hyprland/scratchpad", "custom/media", "backlight", "battery", "mpd", "cpu", "memory", "battery#bat2", "keyboard-state" ]
-    // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // }
 
+    // Choose the order of the modules
+    "modules-left": ["idle_inhibitor", "temperature", "hyprland/workspaces", "hyprland/window" ],
+    "modules-center": ["clock", "custom/swaync" ],
+    "modules-right": [ "tray", "power-profiles-daemon", "battery", "pulseaudio", "network", "custom/power" ],
+
+    // Module config
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -34,10 +16,12 @@
             "deactivated": ""
         }
     },
+
     "tray": {
         // "icon-size": 21,
         "spacing": 5
     },
+
     "clock": {
         "format": "  {:%R | %a | %d-%m-%Y}",
         // "format-alt": "",
@@ -46,6 +30,7 @@
 
         "on-click": "gnome-calendar"
     },
+
     "temperature": {
         "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
@@ -54,6 +39,7 @@
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
+
     //"battery": {
     //    "states": {
     //        // "good": 95,
@@ -80,8 +66,8 @@
 		"critical": 15
 	},
 	"format": "{icon}",
-	"format-charging": " ",
-	"format-plugged": "󱘖 ",
+	"format-charging": "",
+	"format-plugged": "󱘖",
 	"format-alt-click": "click",
 	"format-full": "{icon} Full",
 	"format-alt": "{icon} {time}",
@@ -115,12 +101,13 @@
     "custom/swaync": {
       // "tooltip": true,
       // "tooltip-format": "Left Click: foo\nRight Click: bar",
-      "format": "{icon}  {}",
+      // "format": "{icon}  {}",
+      // "format": "N",
       "format-icons": {
 		// "notification": "<span foreground='red'><sup></sup></span>",
-        "notification": "N",
+        // "notification": "N",
 		// "none": "",
-        "none": "B",
+        // "none": "B",
 		// "dnd-notification": "<span foreground='red'><sup></sup></span>",
 		// "dnd-none": "",
 		// "inhibited-notification": "<span foreground='red'><sup></sup></span>",
@@ -167,5 +154,41 @@
         "on-click": "wlogout",
         "tooltip": true,
         "tooltip-format": "Power Menu"
+    },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",        // needs Font Awesome (or change to whatever you use)
+            "performance": "",
+            // "balanced": "",
+            // "balanced": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     }
+    // Unused
+    
+    // "layer": "top", // Waybar at top layer
+    // "width": 1280, // Waybar width
+
+    // unused modules: ["hyprland/mode", "hyprland/scratchpad", "custom/media", "backlight", "battery", "mpd", "cpu", "memory", "battery#bat2", "keyboard-state" ]
+    // Modules configuration
+    // "hyprland/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "warp-on-scroll": false,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // }
 }

@@ -30,6 +30,8 @@
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     blueman
+    libsForQt5.breeze-icons
+    kdePackages.breeze-icons
     brightnessctl
     cava # CLI audio visualiser
     evince #pdf reader
@@ -49,6 +51,7 @@
     imagemagick
     inxi
     kitty
+    libadwaita
     libinput
     libnotify
     libsecret
