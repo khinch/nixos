@@ -25,7 +25,7 @@
     kieren = {
       isNormalUser = true;
       description = "Kieren Hinch";
-      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "input" "kvm" ];
       packages = with pkgs; [
         dotool
       ];
