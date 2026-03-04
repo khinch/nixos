@@ -7,6 +7,7 @@
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/gnome
+      ../../hardware/egpu-amd.nix
       ../../hardware/wifi.nix
       ../../modules/games
       ../../modules/tools

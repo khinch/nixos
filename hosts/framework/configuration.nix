@@ -8,6 +8,7 @@
       ../../core/packages.nix
       ../../desktops/hyprland
       # ../../hardware/amd.nix
+      ../../hardware/egpu-amd.nix
       ../../hardware/wifi.nix
       ../../modules/games
       ../../modules/tools
