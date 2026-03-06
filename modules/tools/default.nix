@@ -5,6 +5,7 @@
     alacritty
     btop
     curl
+    fastfetch
     fatsort
     freefilesync
     fuse
@@ -16,7 +17,6 @@
     gsmartcontrol
     hardinfo2
     helix
-    htop
     hwinfo
     inotify-tools
     jq
@@ -24,7 +24,6 @@
     lshw
     meld
     mount
-    neofetch
     neovim
     nettools
     ocrmypdf
