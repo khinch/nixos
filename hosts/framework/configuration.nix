@@ -7,7 +7,6 @@
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/hyprland
-      # ../../hardware/amd.nix
       ../../hardware/egpu-amd.nix
       ../../hardware/wifi.nix
       ../../modules/games
@@ -32,23 +31,12 @@
     };
   };
 
-  # PlayOnLinux
-  #services.pipewire = {
-  #  enable = true;
-  #  alsa.enable = true;
-  #  alsa.support32Bit = true;
-  #  pulse.enable = true;
-  #}; 
-
   environment.systemPackages = [
     pkgs.power-profiles-daemon
     pkgs.tailscale
     pkgs.tailscale-systray
   ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # fwupdmgr
-  # services.fwupd.enable = true;
 
   #tailscale
   services.tailscale = {

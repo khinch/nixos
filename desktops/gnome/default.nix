@@ -23,6 +23,8 @@
     };
   };
 
+  programs.xwayland.enable = true;
+
   environment.gnome.excludePackages = (with pkgs; [
     gedit
     gnome-console
@@ -47,6 +49,7 @@
     gnome-tweaks 
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.blur-my-shell
     gnomeExtensions.focus-changer
     gnomeExtensions.forge
     gnomeExtensions.mock-tray
