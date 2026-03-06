@@ -23,6 +23,7 @@
     gcompris
     gnuchess
     lutris
+    mangohud
     mesa-demos
     prismlauncher
     protonup-qt
