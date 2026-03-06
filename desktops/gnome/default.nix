@@ -52,6 +52,8 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.focus-changer
     gnomeExtensions.forge
+    gnomeExtensions.hot-edge
+    gnomeExtensions.logo-menu
     gnomeExtensions.mock-tray
     gnomeExtensions.pop-shell
     gnomeExtensions.space-bar
