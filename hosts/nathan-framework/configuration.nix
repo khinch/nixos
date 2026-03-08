@@ -28,6 +28,7 @@
       extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
       packages = with pkgs; [
         megasync
+        unityhub
       ];
     };
   };
