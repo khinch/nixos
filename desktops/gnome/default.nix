@@ -11,17 +11,19 @@
       };
     };
 
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+
     xserver = {
       enable = true;
-      desktopManager.gnome.enable = true;
-      displayManager.gdm.enable = true;
-      # displayManager.gdm.wayland = false; # Remove this to use wayland
       xkb = {
         layout = "gb";
         variant = "";
       };
     };
   };
+
+  programs.xwayland.enable = true;
 
   environment.gnome.excludePackages = (with pkgs; [
     gedit
@@ -47,8 +49,12 @@
     gnome-tweaks 
     gnomeExtensions.appindicator 
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.blur-my-shell
     gnomeExtensions.focus-changer
     gnomeExtensions.forge
+    gnomeExtensions.hot-edge
+    gnomeExtensions.logo-menu
+    gnomeExtensions.mock-tray
     gnomeExtensions.pop-shell
     gnomeExtensions.space-bar
     gnomeExtensions.switcher

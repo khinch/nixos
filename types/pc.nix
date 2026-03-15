@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   fonts.packages = with pkgs; [
@@ -6,14 +6,14 @@
     fira-code
     #font-awesome
     google-fonts
-    #inter-nerdfont
+    inter-nerdfont
     jetbrains-mono
     nerd-fonts.hack
     #noto-fonts-emoji
     powerline-fonts
     # noto-fonts
     terminus_font
-    vistafonts
+    vista-fonts
   ];
 
   fonts.fontDir.enable = true;

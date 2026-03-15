@@ -7,7 +7,7 @@
       ../../boot
       ../../core/core.nix
       ../../core/packages.nix
-      ../../desktops/hyprland
+      ../../desktops/gnome
       ../../hardware/egpu-amd.nix
       ../../hardware/wifi.nix
       ../../modules/games
@@ -19,15 +19,16 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "framework"; 
+  networking.hostName = "nathan-framework"; 
 
   users.users = {
-    kieren = {
+    nathan = {
       isNormalUser = true;
-      description = "Kieren Hinch";
-      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "input" "kvm" ];
+      description = "Nathan Hinch";
+      extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "kvm" ];
       packages = with pkgs; [
-        dotool
+        megasync
+        unityhub
       ];
     };
   };

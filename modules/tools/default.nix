@@ -1,38 +1,41 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     alacritty
+    btop
     curl
+    fastfetch
     fatsort
     freefilesync
     fuse
     fuse3
     git
+    gitui
+    glow
     gparted
     gsmartcontrol
     hardinfo2
-    htop
+    helix
     hwinfo
     inotify-tools
     jq
     lf
-    libsForQt5.ark
     lshw
     meld
     mount
-    neofetch
     neovim
     nettools
     ocrmypdf
     openssl
     pass
-    pavucontrol
+    pwvucontrol
     pciutils
     pdfgrep
     rsync
     smartmontools
     stow
+    tigervnc
     tree
     ueberzugpp
     usbutils

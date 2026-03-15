@@ -2,10 +2,14 @@
 
 {
   services = {
+    blueman.enable = true;
     dbus.enable = true;
     gnome.gnome-keyring.enable = true;
+    hardware.bolt = {
+      enable = true;
+    };
     libinput = {
-      enable =true;
+      enable = true;
       touchpad = {
         middleEmulation = true;
         naturalScrolling = false;
@@ -17,82 +21,78 @@
     udisks2.enable = true;
     gvfs.enable = true;
 
-    xserver = {
+    displayManager.gdm = {
       enable = true;
-      displayManager.gdm = {
-        enable = true;
-        wayland = true;
-      };
+      wayland = true;
     };
   };
 
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     blueman
+    libsForQt5.breeze-icons
+    kdePackages.breeze-icons
     brightnessctl
+    cava # CLI audio visualiser
     evince #pdf reader
     flameshot 
     gnome-icon-theme
     gnome-calendar
     gnome-keyring
     gnome-maps
+    gnome-system-monitor
+    grim
+    gtk-engine-murrine #for old gtk themes
     hyprcursor
     hypridle
     hyprlock
     hyprpaper
     hyprshot
-    kdePackages.qtwayland
+    imagemagick
+    inxi
     kitty
+    libadwaita
+    libinput
     libnotify
     libsecret
     loupe # image viewer
+    xfce.mousepad
     networkmanagerapplet
     nwg-look
     libsForQt5.qt5.qtwayland
-    rofi-wayland
-    swaynotificationcenter
-    udiskie
-    waybar
-    xdg-desktop-portal-gtk
-    xfce.mousepad
-
-    # JaKooLit
-    ags #for Desktop overview
-    btop
-    cava
-    cliphist
-    eog
-    gnome-system-monitor
-    grim
-    gtk-engine-murrine #for gtk themes
-    imagemagick
-    inxi
-    libsForQt5.qtstyleplugin-kvantum #kvantum
-    nvtopPackages.full
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
+    kdePackages.qtstyleplugin-kvantum # kvantum for QT6 apps
+    libsForQt5.qtstyleplugin-kvantum # kvantum for QT5 apps 
     pamixer
     playerctl
     polkit_gnome
     pyprland
-    libsForQt5.qt5ct
-    kdePackages.qt6ct
     kdePackages.qtwayland
-    kdePackages.qtstyleplugin-kvantum #kvantum
-    rofi-wayland
+    rofi
+    rofimoji
     slurp
-    swappy
-    swww
+    swappy # Snapshot editor
+    swaynotificationcenter
+    udiskie
     unzip
-    wallust
+    wallust # Colour palettes from images
+    waybar
     wlogout
     xarchiver
+    xdg-desktop-portal-gtk
     yad
     yt-dlp
+
+    # Candidates for removal
+    ags #for Desktop overview
+    cliphist # clipboard history. Look for an alternative that has exclusions
+    eog # Eye of Gnome image viewer
   ];
 
   hardware = {
   	bluetooth = {
 	    enable = true;
-	    #powerOnBoot = true;
 	    settings = {
 		    General = {
 		      Enable = "Source,Sink,Media,Socket";
@@ -149,8 +149,7 @@
     ];
   };
 
-  environment.sessionVariables = rec {
-    GSK_RENDERER = "gl"; # Fix black borders: https://gitlab.gnome.org/GNOME/gtk/-/issues/6890
+  environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
 

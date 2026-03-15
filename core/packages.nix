@@ -1,17 +1,24 @@
 { config, pkgs, ... }:
 
-{
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "electron-25.9.0" # For obsidian
-    ];
+let
+  unstable = import (builtins.fetchTarball {
+    # nixos-unstable at some chosen commit
+    url = "https://github.com/NixOS/nixpkgs/archive/d6c71932130818840fc8fe9509cf50be8c64634f.tar.gz";
+    sha256 = "1klgyhj98j3gfsql5sn9rapyx62qk5g8adk5zh9mnc4d0fj61gdr";
+  }) {
+    config = config.nixpkgs.config;
   };
 
+in
+
+{
   environment.systemPackages = with pkgs; [
+    aichat
     amberol
     audacity
     authenticator
+    blender
+    boxbuddy
     cherrytree
     darktable
     digikam
@@ -20,6 +27,7 @@
     drawing
     drawio
     eartag
+    ente-auth
     exiftool
     firefox
     font-manager
@@ -34,7 +42,6 @@
     guvcview
     handbrake
     hugin
-    kdePackages.k3b
     keepassxc
     krename
     krita
@@ -42,25 +49,21 @@
     libreoffice
     losslesscut-bin
     makemkv
-    megasync
+    unstable.megacmd
     metadata-cleaner
     minder
     mpv
-    notepadqq
     obsidian
     pdfmixtool
+    photocollage
     qrencode
     realesrgan-ncnn-vulkan
-    rust-analyzer
-    rustup
     scribus
-    semantik
-    shortwave
-    shotcut
     shutter
     spotify
     starship
     textpieces
+    textsnatcher
     thunderbird
     transmission_4-gtk
     treesheets
@@ -73,11 +76,12 @@
     xpano
     xournalpp
     yazi
+    yaziPlugins.glow
     ydotool
-    zed-editor
+    unstable.zed-editor
     zoom-us
 
-    # Firewire test
+    # Firewire 
     libraw1394
     libavc1394
     libdc1394
