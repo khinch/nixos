@@ -27,7 +27,10 @@
       description = "Kieren Hinch";
       extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "input" "kvm" ];
       packages = with pkgs; [
+        cpio # for unityhub
         dotool
+        jetbrains.rider
+        unityhub
       ];
     };
   };
