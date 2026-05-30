@@ -86,7 +86,8 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠ {ifname}",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "nm-connection-editor"
+        // "on-click": "nm-connection-editor"
+        "on-click": "nm-applet"
     },
     "bluetooth": {
       "format": " ",

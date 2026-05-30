@@ -47,6 +47,16 @@
     enable = true;
     useRoutingFeatures = "client";
   };
+
+  #syncthing
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    user = "kieren";
+    group = "users";
+    dataDir   = "/home/kieren";
+    configDir = "/home/kieren/.config/syncthing";
+  };
   
   # List services that you want to enable:
   # Enable the OpenSSH daemon.

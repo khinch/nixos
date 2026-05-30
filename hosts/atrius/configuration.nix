@@ -50,6 +50,17 @@
   # fwupdmgr
   services.fwupd.enable = true;
 
+
+  #syncthing
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    user = "kieren";
+    group = "users";
+    dataDir   = "/home/kieren";
+    configDir = "/home/kieren/.config/syncthing";
+  };
+
   #vmware
   # virtualisation.vmware.host.enable = true;
   
