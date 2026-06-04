@@ -27,7 +27,10 @@
       description = "Kieren Hinch";
       extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" "input" "kvm" ];
       packages = with pkgs; [
+        cpio # for unityhub
         dotool
+        jetbrains.rider
+        unityhub
       ];
     };
   };
@@ -43,6 +46,16 @@
   services.tailscale = {
     enable = true;
     useRoutingFeatures = "client";
+  };
+
+  #syncthing
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    user = "kieren";
+    group = "users";
+    dataDir   = "/home/kieren";
+    configDir = "/home/kieren/.config/syncthing";
   };
   
   # List services that you want to enable:

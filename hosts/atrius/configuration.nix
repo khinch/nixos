@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, lib, pkgs, ... }:
 
 {
@@ -10,8 +6,7 @@
       ./hardware-configuration.nix
       ../../core/core.nix
       ../../core/packages.nix
-      ../../desktops/gnome
-      ../../hardware/amd.nix
+      ../../desktops/hyprland
       ../../modules/games
       ../../modules/tools
       ../../types/pc.nix
@@ -20,12 +15,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Define your hostname.
   networking.hostName = "atrius"; 
   
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     kieren = {
       isNormalUser = true;
@@ -35,33 +28,7 @@
         dotool
       ];
     };
-    vml = {
-      isNormalUser = true;
-      description = "Work account for VML contract";
-      extraGroups = [ "networkmanager" ];
-      packages = with pkgs; [
-        slack
-        teams-for-linux
-      ];
-    };
-    megatest = {
-      isNormalUser = true;
-      description = "For testing megasync via distrobox";
-    };
   };
-
-  # workaround for slack from https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1927729514
-  nixpkgs.overlays = [
-    (final: prev: {
-    # Fix slack screen sharing following: https://github.com/flathub/com.slack.Slack/issues/101#issuecomment-1807073763
-      slack = prev.slack.overrideAttrs (previousAttrs: {
-        installPhase =
-          previousAttrs.installPhase
-          + ''
-          sed -i'.backup' -e 's/,"WebRTCPipeWireCapturer"/,"LebRTCPipeWireCapturer"/' $out/lib/slack/resources/app.asar
-          '';
-    });
-  })];
 
   services.printing.enable = true;
   # services.printing.drivers = [
@@ -82,6 +49,17 @@
 
   # fwupdmgr
   services.fwupd.enable = true;
+
+
+  #syncthing
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    user = "kieren";
+    group = "users";
+    dataDir   = "/home/kieren";
+    configDir = "/home/kieren/.config/syncthing";
+  };
 
   #vmware
   # virtualisation.vmware.host.enable = true;
@@ -110,6 +88,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
-
+  system.stateVersion = "25.11"; # Did you read the comment?
 }

@@ -17,6 +17,7 @@ in
     amberol
     audacity
     authenticator
+    bambu-studio
     blender
     boxbuddy
     cherrytree
