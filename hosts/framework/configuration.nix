@@ -20,6 +20,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "framework"; 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   users.users = {
     kieren = {
