@@ -1,9 +1,10 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
       <nixos-hardware/common/gpu/amd>
       ./hardware-configuration.nix
+      ../../boot
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/hyprland
@@ -18,6 +19,7 @@
 
   # Define your hostname.
   networking.hostName = "atrius"; 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   users.users = {
     kieren = {
