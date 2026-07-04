@@ -73,7 +73,7 @@ in
     vlc
     vscode
     webcamoid
-    xfce.thunar
+    thunar
     xpano
     xournalpp
     yazi

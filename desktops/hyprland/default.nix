@@ -23,14 +23,12 @@
 
     displayManager.gdm = {
       enable = true;
-      wayland = true;
     };
   };
 
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     blueman
-    libsForQt5.breeze-icons
     kdePackages.breeze-icons
     brightnessctl
     cava # CLI audio visualiser
@@ -56,7 +54,7 @@
     libnotify
     libsecret
     loupe # image viewer
-    xfce.mousepad
+    mousepad
     networkmanagerapplet
     nwg-look
     libsForQt5.qt5.qtwayland
@@ -116,7 +114,7 @@
     nm-applet.indicator = true;
 
 	  thunar.enable = true;
-	  thunar.plugins = with pkgs.xfce; [
+	  thunar.plugins = with pkgs; [
 		  exo
 		  mousepad
 		  thunar-archive-plugin
