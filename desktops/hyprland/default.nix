@@ -21,8 +21,9 @@
     udisks2.enable = true;
     gvfs.enable = true;
 
-    displayManager.gdm = {
-      enable = true;
+    displayManager = {
+      gdm.enable = true;
+      defaultSession = "hyprland-uwsm";
     };
   };
 
@@ -105,6 +106,7 @@
       enable = true;
 		  portalPackage = pkgs.xdg-desktop-portal-hyprland;
   	  xwayland.enable = true;
+  	  withUWSM = true;
     };
 
 	  waybar.enable = true;
