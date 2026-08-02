@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 packages=(
+    "com.bambulab.BambuStudio"
     "com.discordapp.Discord"
     "com.github.flxzt.rnote"
     "com.github.tchx84.Flatseal"
@@ -28,4 +29,6 @@ done
 flatpak --user override --filesystem=$HOME/.local/share/fonts:ro
 flatpak --user override --filesystem=$HOME/.icons:ro
 flatpak --user override --filesystem=/nix/store:ro
+
+flatpak update
 

@@ -21,16 +21,15 @@
     udisks2.enable = true;
     gvfs.enable = true;
 
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
+    displayManager = {
+      gdm.enable = true;
+      defaultSession = "hyprland-uwsm";
     };
   };
 
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     blueman
-    libsForQt5.breeze-icons
     kdePackages.breeze-icons
     brightnessctl
     cava # CLI audio visualiser
@@ -56,7 +55,7 @@
     libnotify
     libsecret
     loupe # image viewer
-    xfce.mousepad
+    mousepad
     networkmanagerapplet
     nwg-look
     libsForQt5.qt5.qtwayland
@@ -107,6 +106,7 @@
       enable = true;
 		  portalPackage = pkgs.xdg-desktop-portal-hyprland;
   	  xwayland.enable = true;
+  	  withUWSM = true;
     };
 
 	  waybar.enable = true;
@@ -116,7 +116,7 @@
     nm-applet.indicator = true;
 
 	  thunar.enable = true;
-	  thunar.plugins = with pkgs.xfce; [
+	  thunar.plugins = with pkgs; [
 		  exo
 		  mousepad
 		  thunar-archive-plugin

@@ -10,6 +10,7 @@
       ../../desktops/hyprland
       ../../modules/games
       ../../modules/tools
+      ../../scripts
       ../../types/pc.nix
     ];
 

@@ -30,7 +30,7 @@
     qsynth
     vulkan-tools
     winetricks
-    wineWowPackages.stable
+    wineWow64Packages.stable
     xboard
   ];
 }
