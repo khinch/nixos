@@ -1,3 +1,3 @@
 {
-  networking.wireless.userControlled.enable = true;
+  networking.wireless.userControlled = true;
 }

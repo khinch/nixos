@@ -42,5 +42,6 @@
     vim
     wget
     wl-clipboard
+    zellij
   ];
 }
