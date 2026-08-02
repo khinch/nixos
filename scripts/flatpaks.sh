@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 packages=(
+    "com.bambulab.BambuStudio"
     "com.discordapp.Discord"
     "com.github.flxzt.rnote"
     "com.github.tchx84.Flatseal"
