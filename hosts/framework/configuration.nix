@@ -12,6 +12,7 @@
       ../../hardware/wifi.nix
       ../../modules/games
       ../../modules/tools
+      ../../scripts
       ../../types/pc.nix
     ];
 
