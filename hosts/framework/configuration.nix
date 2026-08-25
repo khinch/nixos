@@ -14,6 +14,9 @@
       ../../modules/tools
       ../../scripts
       ../../types/pc.nix
+      ../../modules/pay-respects.nix
+      ../../modules/espanso.nix
+      ../../modules/gpu-screen-recorder.nix
     ];
 
   # Bootloader.

@@ -29,6 +29,7 @@ in
     eartag
     ente-auth
     exiftool
+    ferdium
     firefox
     font-manager
     freecad
