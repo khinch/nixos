@@ -46,24 +46,18 @@ matches:
 
   - trigger: "::html:"
     label: "HTML - html"
-    replace: |
-      <html>
-      $|$
-      </html>
+    replace: >-
+      <html>$|$</html>
 
   - trigger: "::head:"
     label: "HTML - head"
-    replace: |
-      <head>
-      $|$
-      </head>
+    replace: >-
+      <head>$|$</head>
 
   - trigger: "::body:"
     label: "HTML - body"
-    replace: |
-      <body>
-      $|$
-      </body>
+    replace: >-
+      <body>$|$</body>
   
   - trigger: "::inline-css:"
     label: "HTML - inline-css"
@@ -127,10 +121,8 @@ matches:
   
   - trigger: "::ul:"
     label: "HTML - ul"
-    replace: |
-      <ul>
-      <li>$|$</li>
-      </ul>
+    replace: >-
+      <ul><li>$|$</li></ul>
   
   - trigger: "::li:"
     label: "HTML - li"
@@ -139,12 +131,8 @@ matches:
   
   - trigger: "::table:"
     label: "HTML - table"
-    replace: |
-      <table width="$|$" border="" align="">
-      <tr>
-      <td width=""></td>
-      </tr>
-      </table>
+    replace: >-
+      <table width="$|$" border="" align=""><tr><th width=""></th></tr></table>
 
   - trigger: "::td:"
     label: "HTML - td"
@@ -153,26 +141,18 @@ matches:
   
   - trigger: "::tr:"
     label: "HTML - tr"
-    replace: |
-      <tr>
-      <td>$|$</td>
-      </tr>
+    replace: >-
+      <tr><td>$|$</td></tr>
       
   - trigger: "::select:"
     label: "HTML - select"
-    replace: |
-      <select name="$|$" id="">
-      <option value=""></option>
-      </select>
+    replace: >-
+      <select name="$|$" id=""><option value=""></option></select>
 
   - trigger: "::optgroup:"
     label: "HTML - optgroup"
-    replace: |
-      <select name="$|$" id="">
-      <optgroup label="">
-      <option value=""></option>
-      </optgroup>
-      </select>
+    replace: >-
+      <select name="$|$" id=""><optgroup label=""><option value=""></option></optgroup>      </select>
 
   - trigger: "::option:"
     label: "HTML - option"
@@ -258,10 +238,8 @@ matches:
 
   - trigger: "::nav:"
     label: "HTML - nav"
-    replace: |
-      <nav>
-      $|$
-      </nav>
+    replace: >-
+      <nav>$|$</nav>
 
   - trigger: "::span:"
     label: "HTML - span"
@@ -270,24 +248,18 @@ matches:
 
   - trigger: "::ol:"
     label: "HTML - ordered list"
-    replace: |
-      <ol>
-      <li>$|$</li>
-      </ol>
+    replace: >-
+      <ol><li>$|$</li></ol>
 
   - trigger: "::main:"
     label: "HTML - main"
-    replace: |
-      <main>
-      $|$
-      </main>
+    replace: >-
+      <main>$|$</main>
 
   - trigger: "::footer:"
     label: "HTML - footer"
-    replace: |
-      <footer>
-      $|$
-      </footer>
+    replace: >-
+      <footer>$|$</footer>
 
   - trigger: "::h1:"
     label: "HTML - h1"
@@ -316,22 +288,21 @@ matches:
 
   - trigger: "::section:"
     label: "HTML - section"
-    replace: |
-      <section>
-      $|$
-      </section>
+    replace: >-
+      <section>$|$</section>
 
   - trigger: "::header:"
     label: "HTML - header"
-    replace: |
-      <header>
-      $|$
-      </header>
+    replace: >-
+      <header>$|$</header>
 
   - trigger: "::article:"
     label: "HTML - article"
     replace: >-
       <article>$|$</article>
 
+  - trigger: "::form:"
+    form: |
+      <a href="[[href]]" target="[[target]]" rel="[[rel]]">$|$</a>
   
 
