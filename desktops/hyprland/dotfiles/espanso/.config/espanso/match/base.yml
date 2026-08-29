@@ -1,0 +1,25 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  - trigger: ":foo"
+    replace: "bar"
+
+  - trigger: ":qbf"
+    replace: "The quick brown fox jumps over the lazy dog!"
+
+  - trigger: ":jimmmy"
+    replace: "Why is Jimmy so dumb? Find out next time!"
+
+  - triggers: ["jimy", "jimmy", "Jimy"]
+    replace: "Jimmy"
