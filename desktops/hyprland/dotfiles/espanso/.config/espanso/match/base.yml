@@ -12,12 +12,6 @@ matches:
   - trigger: ":espanso"
     replace: "Hi there!"
 
-  - trigger: ":foo"
-    replace: "bar"
-
-  - trigger: ":qbf"
-    replace: "The quick brown fox jumps over the lazy dog!"
-
   - trigger: ":jimmmy"
     replace: "Why is Jimmy so dumb? Find out next time!"
 
