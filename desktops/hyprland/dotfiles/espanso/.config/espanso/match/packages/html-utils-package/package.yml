@@ -92,7 +92,7 @@ matches:
   - trigger: "::br:"
     label: "HTML - br"
     replace: >-
-      <br>
+      <br />
 
   - trigger: "::p:"
     label: "HTML - p"
