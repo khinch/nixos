@@ -5,7 +5,6 @@ packages=(
     "com.discordapp.Discord"
     "com.github.flxzt.rnote"
     "com.github.tchx84.Flatseal"
-    "com.ozmartians.VidCutter"
     "com.ticktick.TickTick"
     "com.wireframesketcher.WireframeSketcher"
     "net.cozic.joplin_desktop"

@@ -69,6 +69,7 @@ in
     transmission_4-gtk
     treesheets
     veracrypt
+    vidcutter
     video-trimmer
     vlc
     vscode
