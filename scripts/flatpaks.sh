@@ -7,6 +7,7 @@ packages=(
     "com.github.tchx84.Flatseal"
     "com.ticktick.TickTick"
     "com.wireframesketcher.WireframeSketcher"
+    "io.github.OpenToonz"
     "net.cozic.joplin_desktop"
     "org.kde.kxstitch"
     "org.pencil2d.Pencil2D"
