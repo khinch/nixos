@@ -116,9 +116,8 @@
     nm-applet.indicator = true;
 
 	  thunar.enable = true;
+	  xfconf.enable = true;
 	  thunar.plugins = with pkgs; [
-		  exo
-		  mousepad
 		  thunar-archive-plugin
 		  thunar-volman
 		  tumbler

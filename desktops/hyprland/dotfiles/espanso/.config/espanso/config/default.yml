@@ -1,0 +1,23 @@
+# Reload Espanso after you save configuration or match files
+auto_restart: true
+
+# Preserve whatever was on the clipboard before an expansion
+preserve_clipboard: true
+
+# Double-tap Right Ctrl to disable/enable Espanso
+toggle_key: RIGHT_CTRL
+
+# Open Espanso's search bar
+search_shortcut: off
+search_trigger: ":search"
+
+# Show the tray/menu-bar icon
+show_icon: false
+
+# Use the clipboard for longer expansions
+clipboard_threshold: 100
+
+# GB keyboard layout
+keyboard_layout: {
+  layout: "gb"
+}

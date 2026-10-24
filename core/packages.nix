@@ -29,6 +29,7 @@ in
     eartag
     ente-auth
     exiftool
+    ferdium
     firefox
     font-manager
     freecad
@@ -68,6 +69,7 @@ in
     transmission_4-gtk
     treesheets
     veracrypt
+    vidcutter
     video-trimmer
     vlc
     vscode
