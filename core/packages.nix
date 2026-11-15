@@ -2,9 +2,8 @@
 
 let
   unstable = import (fetchTarball {
-    # nixos-unstable at some chosen commit
-    url = "https://github.com/NixOS/nixpkgs/archive/d6c71932130818840fc8fe9509cf50be8c64634f.tar.gz";
-    sha256 = "1klgyhj98j3gfsql5sn9rapyx62qk5g8adk5zh9mnc4d0fj61gdr";
+    url = "https://github.com/NixOS/nixpkgs/archive/751ec3eadca422e6b63dc8b402db93509f218bfb.tar.gz";
+    sha256 = "751ec3eadca422e6b63dc8b402db93509f218bfb";
   }) {
     config = config.nixpkgs.config;
   };
