@@ -46,6 +46,7 @@
     hypridle
     hyprlock
     hyprpaper
+    hyprpicker
     hyprshot
     imagemagick
     inxi

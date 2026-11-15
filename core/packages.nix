@@ -61,6 +61,7 @@ in
     realesrgan-ncnn-vulkan
     scribus
     shutter
+    simple-scan
     spotify
     starship
     textpieces
@@ -72,7 +73,7 @@ in
     vidcutter
     video-trimmer
     vlc
-    vscode
+    unstable.vscode
     webcamoid
     thunar
     xpano
