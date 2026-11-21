@@ -1,10 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  unstable = import (fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/751ec3eadca422e6b63dc8b402db93509f218bfb.tar.gz";
-    sha256 = "751ec3eadca422e6b63dc8b402db93509f218bfb";
-  }) {
+  unstable = import <nixos-unstable> {
     config = config.nixpkgs.config;
   };
 
@@ -27,6 +24,7 @@ in
     drawio
     eartag
     ente-auth
+    unstable.euro-office-desktopeditors
     exiftool
     ferdium
     firefox
