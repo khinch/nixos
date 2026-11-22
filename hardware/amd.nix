@@ -1,15 +1,20 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # services.xserver.videoDrivers = [ "amdgpu" ];
-  hardware.graphics = {
+  # hardware.graphics = {
     # Mesa
-    enable = true;
+    # enable = true;
 
     # Vulkan
-    enable32Bit = true;
+    # enable32Bit = true;
 
     # extraPackages = [ pkgs.amdvlk ];
     # extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
-  };
+  # };
+
+  
+  environment.systemPackages = with pkgs; [
+    amdgpu_top
+  ];
 }

@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ../hardware/amd.nix
+  ];
+
   boot.initrd.kernelModules = [ "amdgpu" "thunderbolt" "usbhid" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
   environment.systemPackages = with pkgs; [

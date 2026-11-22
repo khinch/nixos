@@ -8,6 +8,7 @@
       ../../core/core.nix
       ../../core/packages.nix
       ../../desktops/hyprland
+      ../../hardware/amd.nix
       ../../modules/games
       ../../modules/tools
       ../../scripts

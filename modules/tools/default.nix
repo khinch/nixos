@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     alacritty
+    bat
     btop
     curl
     fastfetch
